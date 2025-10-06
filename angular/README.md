@@ -1,294 +1,520 @@
-# Angular Interview Questions for Experienced Developers (4-5 Years)
+# 🚀 Complete Angular Interview Questions with Solutions
 
-## 🎯 Difficulty Levels
-- **🟢 Intermediate**: Core Angular concepts and best practices
-- **🟡 Advanced**: Performance optimization and complex scenarios
-- **🔴 Expert**: Architecture, scalability, and enterprise-level solutions
-- **🟣 Senior**: System design, team leadership, and advanced patterns
+A comprehensive guide covering all Angular interview questions with detailed solutions, code examples, and best practices.
 
-## 📋 Questions
+## 📋 Table of Contents
 
-### 🟢 Intermediate Level
+- [🟢 Beginner Level (0-2 years)](#-beginner-level-0-2-years)
+- [🟡 Intermediate Level (2-4 years)](#-intermediate-level-2-4-years)
+- [🔴 Advanced Level (4-6 years)](#-advanced-level-4-6-years)
+- [🟣 Senior Level (6+ years)](#-senior-level-6-years)
+- [🎯 Topic-wise Questions](#-topic-wise-questions)
 
-#### 1. Explain Angular's change detection mechanism and how it works?
+---
+
+## 🟢 Beginner Level (0-2 years)
+
+### 1. What is Angular and how does it differ from AngularJS?
+
 **Answer:**
-Angular's change detection is a mechanism that determines when and how to update the view when the model changes.
+Angular is a TypeScript-based web application framework developed by Google. It's a complete rewrite of AngularJS with significant improvements.
 
+**Key Differences:**
+
+| Feature | AngularJS | Angular |
+|---------|-----------|---------|
+| Language | JavaScript | TypeScript |
+| Architecture | MVC | Component-based |
+| Change Detection | Dirty checking | Zone.js |
+| Mobile Support | Limited | Excellent |
+| Performance | Slower | Much faster |
+
+**Example:**
 ```typescript
-// Default Change Detection Strategy
+// AngularJS (1.x)
+angular.module('myApp', [])
+  .controller('MyController', function($scope) {
+    $scope.message = 'Hello AngularJS';
+  });
+
+// Angular (2+)
 @Component({
-  selector: 'app-user',
-  template: `<div>{{ user.name }}</div>`,
+  selector: 'app-my',
+  template: '<h1>{{message}}</h1>'
+})
+export class MyComponent {
+  message = 'Hello Angular';
+}
+```
+
+### 2. Explain Angular modules and their purpose
+
+**Answer:**
+Angular modules (NgModules) are containers that organize related code into functional sets. They help organize the application into cohesive blocks of functionality.
+
+**Key Concepts:**
+- **Declarations**: Components, directives, and pipes
+- **Imports**: Other modules needed
+- **Providers**: Services available for injection
+- **Exports**: Components/directives available to other modules
+
+**Example:**
+```typescript
+@NgModule({
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpClientModule
+  ],
+  providers: [
+    UserService,
+    { provide: API_URL, useValue: 'https://api.example.com' }
+  ],
+  exports: [
+    HeaderComponent
+  ],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+### 3. What are Angular components and how do you create them?
+
+**Answer:**
+Components are the building blocks of Angular applications. They control a view and contain the application logic.
+
+**Component Structure:**
+```typescript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-user-profile',
+  templateUrl: './user-profile.component.html',
+  styleUrls: ['./user-profile.component.css']
+})
+export class UserProfileComponent {
+  user = {
+    name: 'John Doe',
+    email: 'john@example.com'
+  };
+
+  onUserClick() {
+    console.log('User clicked!');
+  }
+}
+```
+
+**Component Lifecycle Hooks:**
+```typescript
+export class UserProfileComponent implements OnInit, OnDestroy {
+  ngOnInit() {
+    console.log('Component initialized');
+  }
+
+  ngOnDestroy() {
+    console.log('Component destroyed');
+  }
+}
+```
+
+### 4. What is the difference between Angular services and components?
+
+**Answer:**
+
+| Aspect | Components | Services |
+|--------|------------|----------|
+| Purpose | Handle UI logic and user interactions | Handle business logic and data |
+| Lifecycle | Created/destroyed with views | Singleton (lives for app lifetime) |
+| Usage | One per template instance | Shared across components |
+| Example | UserProfileComponent | UserService, DataService |
+
+**Service Example:**
+```typescript
+@Injectable({
+  providedIn: 'root'
+})
+export class UserService {
+  private users: User[] = [];
+
+  getUsers(): Observable<User[]> {
+    return of(this.users);
+  }
+
+  addUser(user: User): void {
+    this.users.push(user);
+  }
+}
+```
+
+### 5. How do you implement two-way data binding in Angular?
+
+**Answer:**
+Two-way data binding combines property binding and event binding using the `[(ngModel)]` directive.
+
+**Example:**
+```typescript
+// Component
+export class UserFormComponent {
+  user = {
+    name: '',
+    email: ''
+  };
+}
+```
+
+```html
+<!-- Template -->
+<input [(ngModel)]="user.name" placeholder="Name">
+<input [(ngModel)]="user.email" placeholder="Email">
+<p>Hello {{user.name}}!</p>
+```
+
+**Manual Implementation:**
+```html
+<input [value]="user.name" (input)="user.name = $event.target.value">
+```
+
+### 6. What are Angular directives and how do you create custom directives?
+
+**Answer:**
+Directives are classes that add behavior to elements in the DOM.
+
+**Types of Directives:**
+1. **Components** (directives with templates)
+2. **Structural** (ngIf, ngFor, ngSwitch)
+3. **Attribute** (ngClass, ngStyle, ngModel)
+
+**Custom Directive Example:**
+```typescript
+@Directive({
+  selector: '[appHighlight]'
+})
+export class HighlightDirective {
+  @Input() appHighlight = 'yellow';
+
+  constructor(private el: ElementRef) {}
+
+  @HostListener('mouseenter') onMouseEnter() {
+    this.highlight(this.appHighlight);
+  }
+
+  @HostListener('mouseleave') onMouseLeave() {
+    this.highlight(null);
+  }
+
+  private highlight(color: string) {
+    this.el.nativeElement.style.backgroundColor = color;
+  }
+}
+```
+
+**Usage:**
+```html
+<p appHighlight="lightblue">Hover over me!</p>
+```
+
+### 7. Explain Angular pipes and how to create custom pipes
+
+**Answer:**
+Pipes transform data in templates. They're pure functions that take input and return transformed output.
+
+**Built-in Pipes:**
+```html
+<p>{{ name | uppercase }}</p>
+<p>{{ date | date:'short' }}</p>
+<p>{{ price | currency:'USD' }}</p>
+```
+
+**Custom Pipe:**
+```typescript
+@Pipe({
+  name: 'reverse'
+})
+export class ReversePipe implements PipeTransform {
+  transform(value: string): string {
+    return value.split('').reverse().join('');
+  }
+}
+```
+
+**Usage:**
+```html
+<p>{{ 'Hello' | reverse }}</p> <!-- Output: olleH -->
+```
+
+### 8. What is Angular CLI and what are its main commands?
+
+**Answer:**
+Angular CLI is a command-line interface for Angular development.
+
+**Main Commands:**
+```bash
+# Create new project
+ng new my-app
+
+# Generate components
+ng generate component user-profile
+ng g c user-profile
+
+# Generate services
+ng generate service user
+ng g s user
+
+# Generate modules
+ng generate module user
+ng g m user
+
+# Build project
+ng build
+ng build --prod
+
+# Serve project
+ng serve
+ng serve --port 4200
+
+# Run tests
+ng test
+ng e2e
+
+# Add packages
+ng add @angular/material
+```
+
+---
+
+## 🟡 Intermediate Level (2-4 years)
+
+### 1. Explain Angular's change detection mechanism and how it works?
+
+**Answer:**
+Angular's change detection is a mechanism that checks for changes in component data and updates the DOM accordingly.
+
+**How it works:**
+1. Zone.js patches browser APIs
+2. When async operations complete, Zone.js triggers change detection
+3. Angular checks all components for changes
+4. Updates DOM where changes are detected
+
+**Change Detection Strategies:**
+
+**Default Strategy:**
+```typescript
+@Component({
   changeDetection: ChangeDetectionStrategy.Default
 })
-export class UserComponent {
-  user = { name: 'John' };
-  
-  updateUser() {
-    this.user.name = 'Jane'; // Triggers change detection
-  }
+export class MyComponent {
+  data = 'Hello';
 }
+```
 
-// OnPush Change Detection Strategy
+**OnPush Strategy:**
+```typescript
 @Component({
-  selector: 'app-user-push',
-  template: `<div>{{ user.name }}</div>`,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class UserPushComponent {
-  @Input() user: User;
-  
-  constructor(private cdr: ChangeDetectorRef) {}
-  
-  updateUser() {
-    this.user.name = 'Jane';
-    this.cdr.markForCheck(); // Manual trigger for OnPush
-  }
-}
-
-// Custom Change Detection
-@Component({
-  selector: 'app-custom',
-  template: `<div>{{ data }}</div>`,
-  changeDetection: ChangeDetectionStrategy.OnPush
-})
-export class CustomComponent {
-  data = 'Initial';
+export class MyComponent {
+  @Input() data: string;
   
   constructor(private cdr: ChangeDetectorRef) {}
   
   updateData() {
     this.data = 'Updated';
-    this.cdr.detectChanges(); // Immediate change detection
+    this.cdr.markForCheck(); // Trigger change detection
   }
 }
 ```
 
-**Key Concepts:**
-- Change Detection Strategy
-- OnPush vs Default
-- ChangeDetectorRef
-- Performance implications
-- Zone.js integration
-
-#### 2. What are Angular Services and how do you implement dependency injection?
-**Answer:**
-Services are singleton objects that provide functionality across the application:
-
+**Manual Change Detection:**
 ```typescript
-// Basic Service
-@Injectable({
-  providedIn: 'root' // Singleton service
-})
-export class UserService {
-  private users: User[] = [];
+export class MyComponent {
+  constructor(private cdr: ChangeDetectorRef) {}
   
-  getUsers(): Observable<User[]> {
-    return of(this.users);
-  }
-  
-  addUser(user: User): void {
-    this.users.push(user);
-  }
-  
-  updateUser(id: number, user: User): void {
-    const index = this.users.findIndex(u => u.id === id);
-    if (index !== -1) {
-      this.users[index] = user;
-    }
+  updateData() {
+    // Update data
+    this.cdr.detectChanges(); // Force change detection
   }
 }
+```
 
-// Service with HTTP
+### 2. What are Angular Services and how do you implement dependency injection?
+
+**Answer:**
+Services are singleton objects that provide functionality across the application.
+
+**Basic Service:**
+```typescript
 @Injectable({
   providedIn: 'root'
 })
-export class ApiService {
-  private apiUrl = 'https://api.example.com';
-  
-  constructor(private http: HttpClient) {}
-  
-  get<T>(endpoint: string): Observable<T> {
-    return this.http.get<T>(`${this.apiUrl}/${endpoint}`);
+export class DataService {
+  private data: any[] = [];
+
+  getData(): any[] {
+    return this.data;
   }
-  
-  post<T>(endpoint: string, data: any): Observable<T> {
-    return this.http.post<T>(`${this.apiUrl}/${endpoint}`, data);
+
+  addData(item: any): void {
+    this.data.push(item);
   }
 }
+```
 
-// Custom Injection Token
-export const API_CONFIG = new InjectionToken<ApiConfig>('API_CONFIG');
-
-@Injectable({
-  providedIn: 'root'
+**Dependency Injection:**
+```typescript
+@Component({
+  selector: 'app-user',
+  template: '<h1>{{user.name}}</h1>'
 })
-export class ConfigService {
-  constructor(@Inject(API_CONFIG) private config: ApiConfig) {}
-  
-  getApiUrl(): string {
-    return this.config.apiUrl;
+export class UserComponent {
+  user: User;
+
+  constructor(
+    private userService: UserService,
+    private logger: LoggerService
+  ) {
+    this.user = this.userService.getCurrentUser();
+    this.logger.log('User component initialized');
   }
 }
+```
 
-// Module-level Service
+**Custom Injection Tokens:**
+```typescript
+export const API_URL = new InjectionToken<string>('API_URL');
+
 @NgModule({
   providers: [
-    { provide: 'APP_CONFIG', useValue: { apiUrl: 'https://api.example.com' } }
+    { provide: API_URL, useValue: 'https://api.example.com' }
   ]
 })
 export class AppModule {}
+
+// Usage
+constructor(@Inject(API_URL) private apiUrl: string) {}
 ```
 
-**Key Concepts:**
-- Dependency Injection
-- Service lifecycle
-- Injection tokens
-- Provider configuration
-- Singleton pattern
+### 3. How do you implement routing and navigation in Angular?
 
-#### 3. How do you implement routing and navigation in Angular?
 **Answer:**
-Angular Router provides navigation and routing capabilities:
+Angular Router enables navigation between different views in a single-page application.
 
+**Basic Routing Setup:**
 ```typescript
-// App Routing Module
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'users', component: UserListComponent },
   { path: 'users/:id', component: UserDetailComponent },
-  { path: 'users/:id/edit', component: UserEditComponent },
-  { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
   { path: '**', component: PageNotFoundComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    enableTracing: false,
-    preloadingStrategy: PreloadAllModules
-  })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
+```
 
-// Component with Navigation
-@Component({
-  selector: 'app-user-list',
-  template: `
-    <div *ngFor="let user of users">
-      <a [routerLink]="['/users', user.id]">{{ user.name }}</a>
-      <button (click)="editUser(user.id)">Edit</button>
-    </div>
-  `
-})
-export class UserListComponent {
-  users: User[] = [];
-  
-  constructor(
-    private router: Router,
-    private route: ActivatedRoute
-  ) {}
-  
-  editUser(id: number): void {
-    this.router.navigate(['/users', id, 'edit']);
+**Lazy Loading:**
+```typescript
+const routes: Routes = [
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
   }
-  
-  navigateWithQuery(): void {
-    this.router.navigate(['/users'], {
-      queryParams: { page: 1, size: 10 },
-      fragment: 'top'
-    });
-  }
-}
+];
+```
 
-// Route Guards
-@Injectable({
-  providedIn: 'root'
-})
+**Route Guards:**
+```typescript
+@Injectable()
 export class AuthGuard implements CanActivate {
   constructor(private authService: AuthService, private router: Router) {}
-  
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean {
+
+  canActivate(): boolean {
     if (this.authService.isAuthenticated()) {
       return true;
     }
-    
-    this.router.navigate(['/login'], { queryParams: { returnUrl: state.url } });
+    this.router.navigate(['/login']);
     return false;
-  }
-}
-
-// Resolver
-@Injectable({
-  providedIn: 'root'
-})
-export class UserResolver implements Resolve<User> {
-  constructor(private userService: UserService) {}
-  
-  resolve(route: ActivatedRouteSnapshot): Observable<User> {
-    const id = route.paramMap.get('id');
-    return this.userService.getUser(+id);
   }
 }
 ```
 
-**Key Concepts:**
-- Route configuration
-- Navigation methods
-- Route guards
-- Route resolvers
-- Lazy loading
-- Route parameters
-
-### 🟡 Advanced Level
-
-#### 4. How do you implement state management in Angular applications?
-**Answer:**
-State management patterns for complex Angular applications:
-
+**Navigation:**
 ```typescript
-// NgRx Store Implementation
-// user.actions.ts
+export class UserComponent {
+  constructor(private router: Router, private route: ActivatedRoute) {}
+
+  navigateToUser(id: number) {
+    this.router.navigate(['/users', id]);
+  }
+
+  navigateWithQuery() {
+    this.router.navigate(['/users'], {
+      queryParams: { page: 1, size: 10 }
+    });
+  }
+}
+```
+
+### 4. How do you implement state management in Angular applications?
+
+**Answer:**
+State management helps manage application data in a predictable way.
+
+**Service-based State Management:**
+```typescript
+@Injectable({
+  providedIn: 'root'
+})
+export class UserStore {
+  private usersSubject = new BehaviorSubject<User[]>([]);
+  users$ = this.usersSubject.asObservable();
+
+  get users(): User[] {
+    return this.usersSubject.value;
+  }
+
+  addUser(user: User): void {
+    const currentUsers = this.users;
+    this.usersSubject.next([...currentUsers, user]);
+  }
+
+  updateUser(updatedUser: User): void {
+    const users = this.users.map(user => 
+      user.id === updatedUser.id ? updatedUser : user
+    );
+    this.usersSubject.next(users);
+  }
+}
+```
+
+**NgRx Implementation:**
+```typescript
+// Actions
 export const loadUsers = createAction('[User] Load Users');
 export const loadUsersSuccess = createAction(
   '[User] Load Users Success',
   props<{ users: User[] }>()
 );
-export const loadUsersFailure = createAction(
-  '[User] Load Users Failure',
-  props<{ error: string }>()
-);
 
-// user.reducer.ts
-export interface UserState {
-  users: User[];
-  loading: boolean;
-  error: string | null;
-}
-
-const initialState: UserState = {
-  users: [],
-  loading: false,
-  error: null
-};
-
+// Reducer
 export const userReducer = createReducer(
   initialState,
-  on(loadUsers, (state) => ({ ...state, loading: true })),
   on(loadUsersSuccess, (state, { users }) => ({
     ...state,
     users,
     loading: false
-  })),
-  on(loadUsersFailure, (state, { error }) => ({
-    ...state,
-    error,
-    loading: false
   }))
 );
 
-// user.effects.ts
+// Effects
 @Injectable()
 export class UserEffects {
   loadUsers$ = createEffect(() =>
@@ -296,1206 +522,971 @@ export class UserEffects {
       ofType(loadUsers),
       switchMap(() =>
         this.userService.getUsers().pipe(
-          map(users => loadUsersSuccess({ users })),
-          catchError(error => of(loadUsersFailure({ error: error.message })))
+          map(users => loadUsersSuccess({ users }))
         )
       )
     )
   );
-  
-  constructor(
-    private actions$: Actions,
-    private userService: UserService
-  ) {}
-}
-
-// Component with NgRx
-@Component({
-  selector: 'app-user-list',
-  template: `
-    <div *ngIf="loading$ | async">Loading...</div>
-    <div *ngFor="let user of users$ | async">
-      {{ user.name }}
-    </div>
-  `
-})
-export class UserListComponent implements OnInit {
-  users$ = this.store.select(selectUsers);
-  loading$ = this.store.select(selectLoading);
-  
-  constructor(private store: Store) {}
-  
-  ngOnInit(): void {
-    this.store.dispatch(loadUsers());
-  }
-}
-
-// Alternative: Service-based State Management
-@Injectable({
-  providedIn: 'root'
-})
-export class UserStateService {
-  private usersSubject = new BehaviorSubject<User[]>([]);
-  private loadingSubject = new BehaviorSubject<boolean>(false);
-  
-  users$ = this.usersSubject.asObservable();
-  loading$ = this.loadingSubject.asObservable();
-  
-  constructor(private userService: UserService) {}
-  
-  loadUsers(): void {
-    this.loadingSubject.next(true);
-    this.userService.getUsers().subscribe({
-      next: (users) => {
-        this.usersSubject.next(users);
-        this.loadingSubject.next(false);
-      },
-      error: (error) => {
-        this.loadingSubject.next(false);
-        console.error('Error loading users:', error);
-      }
-    });
-  }
-  
-  addUser(user: User): void {
-    const currentUsers = this.usersSubject.value;
-    this.usersSubject.next([...currentUsers, user]);
-  }
 }
 ```
 
-**Key Concepts:**
-- NgRx Store
-- Actions, Reducers, Effects
-- Selectors
-- Service-based state
-- State normalization
+### 5. How do you optimize Angular application performance?
 
-#### 5. How do you optimize Angular application performance?
 **Answer:**
-Advanced performance optimization techniques:
+Performance optimization is crucial for large Angular applications.
 
+**OnPush Change Detection:**
 ```typescript
-// OnPush Change Detection
 @Component({
-  selector: 'app-user-card',
-  template: `<div>{{ user.name }}</div>`,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class UserCardComponent {
-  @Input() user: User;
-  
-  constructor(private cdr: ChangeDetectorRef) {}
-}
-
-// TrackBy Function for *ngFor
-@Component({
-  selector: 'app-user-list',
-  template: `
-    <div *ngFor="let user of users; trackBy: trackByUserId">
-      {{ user.name }}
-    </div>
-  `
-})
 export class UserListComponent {
-  users: User[] = [];
-  
+  @Input() users: User[] = [];
+}
+```
+
+**TrackBy Functions:**
+```typescript
+export class UserListComponent {
   trackByUserId(index: number, user: User): number {
     return user.id;
   }
 }
+```
 
-// Lazy Loading with Preloading Strategy
+```html
+<div *ngFor="let user of users; trackBy: trackByUserId">
+  {{ user.name }}
+</div>
+```
+
+**Lazy Loading:**
+```typescript
 const routes: Routes = [
   {
     path: 'admin',
-    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule),
-    data: { preload: true }
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
   }
 ];
+```
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    preloadingStrategy: CustomPreloadingStrategy
-  })]
-})
-export class AppRoutingModule {}
+**Virtual Scrolling:**
+```html
+<cdk-virtual-scroll-viewport itemSize="50" class="viewport">
+  <div *cdkVirtualFor="let user of users" class="user-item">
+    {{ user.name }}
+  </div>
+</cdk-virtual-scroll-viewport>
+```
 
-// Custom Preloading Strategy
-@Injectable({
-  providedIn: 'root'
-})
-export class CustomPreloadingStrategy implements PreloadingStrategy {
-  preload(route: Route, load: () => Observable<any>): Observable<any> {
-    if (route.data && route.data['preload']) {
-      return load();
-    }
-    return of(null);
-  }
-}
-
-// Virtual Scrolling
-@Component({
-  selector: 'app-virtual-list',
-  template: `
-    <cdk-virtual-scroll-viewport itemSize="50" class="viewport">
-      <div *cdkVirtualFor="let user of users" class="item">
-        {{ user.name }}
-      </div>
-    </cdk-virtual-scroll-viewport>
-  `,
-  styles: [`
-    .viewport {
-      height: 400px;
-    }
-    .item {
-      height: 50px;
-    }
-  `]
-})
-export class VirtualListComponent {
-  users: User[] = [];
-  
-  constructor() {
-    // Generate large dataset
-    this.users = Array.from({ length: 10000 }, (_, i) => ({
-      id: i,
-      name: `User ${i}`
-    }));
-  }
-}
-
-// Memory Leak Prevention
-@Component({
-  selector: 'app-user-detail',
-  template: `<div>{{ user.name }}</div>`
-})
-export class UserDetailComponent implements OnInit, OnDestroy {
+**Memory Leak Prevention:**
+```typescript
+export class UserComponent implements OnDestroy {
   private destroy$ = new Subject<void>();
-  user: User;
-  
-  constructor(private userService: UserService) {}
-  
-  ngOnInit(): void {
-    this.userService.getUser(1)
+
+  ngOnInit() {
+    this.userService.getUsers()
       .pipe(takeUntil(this.destroy$))
-      .subscribe(user => this.user = user);
+      .subscribe(users => this.users = users);
   }
-  
-  ngOnDestroy(): void {
+
+  ngOnDestroy() {
     this.destroy$.next();
     this.destroy$.complete();
   }
 }
-
-// Bundle Optimization
-// webpack.config.js
-module.exports = {
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-      cacheGroups: {
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all'
-        }
-      }
-    }
-  }
-};
 ```
 
-**Key Concepts:**
-- Change detection optimization
-- TrackBy functions
-- Lazy loading
-- Virtual scrolling
-- Memory leak prevention
-- Bundle optimization
+### 6. How do you implement advanced forms in Angular?
 
-#### 6. How do you implement advanced forms in Angular?
 **Answer:**
-Complex form handling with validation and dynamic forms:
+Angular provides two approaches: Template-driven and Reactive forms.
 
+**Reactive Forms:**
 ```typescript
-// Reactive Forms with Custom Validators
-@Component({
-  selector: 'app-user-form',
-  template: `
-    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
-      <div>
-        <label>Name:</label>
-        <input formControlName="name" />
-        <div *ngIf="name.invalid && name.touched">
-          <div *ngIf="name.errors?.['required']">Name is required</div>
-          <div *ngIf="name.errors?.['minlength']">Name must be at least 3 characters</div>
-        </div>
-      </div>
-      
-      <div>
-        <label>Email:</label>
-        <input formControlName="email" />
-        <div *ngIf="email.invalid && email.touched">
-          <div *ngIf="email.errors?.['email']">Invalid email format</div>
-        </div>
-      </div>
-      
-      <div formArrayName="addresses">
-        <div *ngFor="let address of addresses.controls; let i = index" [formGroupName]="i">
-          <input formControlName="street" placeholder="Street" />
-          <input formControlName="city" placeholder="City" />
-          <button type="button" (click)="removeAddress(i)">Remove</button>
-        </div>
-        <button type="button" (click)="addAddress()">Add Address</button>
-      </div>
-      
-      <button type="submit" [disabled]="userForm.invalid">Submit</button>
-    </form>
-  `
-})
 export class UserFormComponent implements OnInit {
   userForm: FormGroup;
-  
-  constructor(private fb: FormBuilder) {
+
+  constructor(private fb: FormBuilder) {}
+
+  ngOnInit() {
     this.userForm = this.fb.group({
-      name: ['', [Validators.required, Validators.minLength(3)]],
+      name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.email]],
-      addresses: this.fb.array([])
+      age: ['', [Validators.min(18), Validators.max(100)]],
+      address: this.fb.group({
+        street: [''],
+        city: [''],
+        zipCode: ['']
+      })
     });
   }
-  
-  get name() { return this.userForm.get('name'); }
-  get email() { return this.userForm.get('email'); }
-  get addresses() { return this.userForm.get('addresses') as FormArray; }
-  
-  addAddress(): void {
-    const addressGroup = this.fb.group({
-      street: ['', Validators.required],
-      city: ['', Validators.required]
-    });
-    this.addresses.push(addressGroup);
-  }
-  
-  removeAddress(index: number): void {
-    this.addresses.removeAt(index);
-  }
-  
-  onSubmit(): void {
+
+  onSubmit() {
     if (this.userForm.valid) {
       console.log(this.userForm.value);
     }
   }
 }
+```
 
-// Custom Validator
-export function customValidator(control: AbstractControl): ValidationErrors | null {
+**Custom Validators:**
+```typescript
+export function passwordValidator(control: AbstractControl): ValidationErrors | null {
   const value = control.value;
-  if (value && value.includes('test')) {
-    return { customError: true };
-  }
-  return null;
+  if (!value) return null;
+  
+  const hasUpperCase = /[A-Z]/.test(value);
+  const hasLowerCase = /[a-z]/.test(value);
+  const hasNumeric = /[0-9]/.test(value);
+  
+  const valid = hasUpperCase && hasLowerCase && hasNumeric;
+  return valid ? null : { passwordStrength: true };
 }
+```
 
-// Async Validator
-export function asyncEmailValidator(userService: UserService) {
-  return (control: AbstractControl): Observable<ValidationErrors | null> => {
-    if (!control.value) {
-      return of(null);
-    }
-    
-    return userService.checkEmailExists(control.value).pipe(
+**Async Validators:**
+```typescript
+export class UserFormComponent {
+  userForm = this.fb.group({
+    email: ['', Validators.email, this.emailExistsValidator.bind(this)]
+  });
+
+  emailExistsValidator(control: AbstractControl): Observable<ValidationErrors | null> {
+    return this.userService.checkEmailExists(control.value).pipe(
       map(exists => exists ? { emailExists: true } : null),
       catchError(() => of(null))
     );
-  };
-}
-
-// Dynamic Forms
-@Component({
-  selector: 'app-dynamic-form',
-  template: `
-    <form [formGroup]="form" (ngSubmit)="onSubmit()">
-      <div *ngFor="let field of fields" [formGroupName]="field.key">
-        <ng-container [ngSwitch]="field.type">
-          <input *ngSwitchCase="'text'" [formControlName]="field.control" [placeholder]="field.placeholder" />
-          <select *ngSwitchCase="'select'" [formControlName]="field.control">
-            <option *ngFor="let option of field.options" [value]="option.value">
-              {{ option.label }}
-            </option>
-          </select>
-        </ng-container>
-      </div>
-      <button type="submit">Submit</button>
-    </form>
-  `
-})
-export class DynamicFormComponent {
-  form: FormGroup;
-  fields: DynamicField[] = [];
-  
-  constructor(private fb: FormBuilder) {
-    this.fields = [
-      { key: 'name', type: 'text', control: 'name', placeholder: 'Name' },
-      { key: 'email', type: 'text', control: 'email', placeholder: 'Email' },
-      { key: 'country', type: 'select', control: 'country', options: [
-        { value: 'us', label: 'United States' },
-        { value: 'ca', label: 'Canada' }
-      ]}
-    ];
-    
-    this.form = this.fb.group({});
-    this.fields.forEach(field => {
-      this.form.addControl(field.key, this.fb.group({}));
-      this.form.get(field.key)?.addControl(field.control, this.fb.control(''));
-    });
   }
 }
 ```
 
-**Key Concepts:**
-- Reactive forms
-- Custom validators
-- Async validators
-- Dynamic forms
-- Form arrays
-- Validation patterns
+---
 
-### 🔴 Expert Level
+## 🔴 Advanced Level (4-6 years)
 
-#### 7. How do you implement micro-frontend architecture with Angular?
+### 1. How do you implement micro-frontend architecture with Angular?
+
 **Answer:**
-Micro-frontend architecture for large-scale applications:
+Micro-frontends allow teams to work independently on different parts of a larger application.
 
+**Module Federation Setup:**
 ```typescript
-// Shell Application (Main App)
-// app.module.ts
-@NgModule({
-  declarations: [AppComponent],
-  imports: [
-    BrowserModule,
-    RouterModule.forRoot([
-      { path: 'users', loadChildren: () => import('user-mfe/UserModule') },
-      { path: 'products', loadChildren: () => import('product-mfe/ProductModule') }
-    ])
-  ],
-  providers: [
-    {
-      provide: 'SHARED_STATE',
-      useValue: new BehaviorSubject({})
-    }
-  ],
-  bootstrap: [AppComponent]
-})
-export class AppModule {}
-
-// Micro-frontend Module
-// user-mfe/user.module.ts
-@NgModule({
-  declarations: [UserListComponent, UserDetailComponent],
-  imports: [
-    CommonModule,
-    RouterModule.forChild([
-      { path: '', component: UserListComponent },
-      { path: ':id', component: UserDetailComponent }
-    ])
-  ],
-  providers: [
-    UserService,
-    {
-      provide: 'SHARED_STATE',
-      useExisting: 'SHARED_STATE'
-    }
-  ]
-})
-export class UserModule {}
-
-// Shared State Service
-@Injectable({
-  providedIn: 'root'
-})
-export class SharedStateService {
-  private state$ = new BehaviorSubject<any>({});
-  
-  setState(key: string, value: any): void {
-    const currentState = this.state$.value;
-    this.state$.next({ ...currentState, [key]: value });
-  }
-  
-  getState(key: string): Observable<any> {
-    return this.state$.pipe(
-      map(state => state[key]),
-      distinctUntilChanged()
-    );
-  }
-}
-
-// Module Federation Configuration
 // webpack.config.js
 const ModuleFederationPlugin = require('@module-federation/webpack');
 
 module.exports = {
-  mode: 'development',
   plugins: [
     new ModuleFederationPlugin({
       name: 'shell',
       remotes: {
-        'user-mfe': 'userMfe@http://localhost:4201/remoteEntry.js',
-        'product-mfe': 'productMfe@http://localhost:4202/remoteEntry.js'
-      },
-      shared: {
-        '@angular/core': { singleton: true },
-        '@angular/common': { singleton: true },
-        '@angular/router': { singleton: true }
+        userApp: 'userApp@http://localhost:4201/remoteEntry.js',
+        productApp: 'productApp@http://localhost:4202/remoteEntry.js'
       }
     })
   ]
 };
-
-// Communication between Micro-frontends
-@Injectable({
-  providedIn: 'root'
-})
-export class MicroFrontendCommunication {
-  private eventBus = new Subject<any>();
-  
-  emit(event: string, data: any): void {
-    this.eventBus.next({ event, data });
-  }
-  
-  listen(event: string): Observable<any> {
-    return this.eventBus.pipe(
-      filter(({ event: eventName }) => eventName === event),
-      map(({ data }) => data)
-    );
-  }
-}
-
-// Shared Component Library
-@Component({
-  selector: 'lib-shared-button',
-  template: `<button [class]="buttonClass" (click)="onClick.emit()">
-    <ng-content></ng-content>
-  </button>`
-})
-export class SharedButtonComponent {
-  @Input() variant: 'primary' | 'secondary' = 'primary';
-  @Input() size: 'small' | 'medium' | 'large' = 'medium';
-  @Output() onClick = new EventEmitter<void>();
-  
-  get buttonClass(): string {
-    return `btn btn-${this.variant} btn-${this.size}`;
-  }
-}
 ```
 
-**Key Concepts:**
-- Module Federation
-- Micro-frontend architecture
-- Shared state management
-- Inter-micro-frontend communication
-- Shared component libraries
-
-#### 8. How do you implement advanced testing strategies in Angular?
-**Answer:**
-Comprehensive testing approaches for Angular applications:
-
+**Shell Application:**
 ```typescript
-// Unit Testing with Jasmine and Karma
-describe('UserService', () => {
-  let service: UserService;
+@Component({
+  selector: 'app-shell',
+  template: `
+    <header>Main App</header>
+    <router-outlet></router-outlet>
+    <user-app></user-app>
+    <product-app></product-app>
+  `
+})
+export class ShellComponent {}
+```
+
+**Remote Application:**
+```typescript
+@NgModule({
+  declarations: [UserComponent],
+  exports: [UserComponent]
+})
+export class UserModule {}
+```
+
+### 2. How do you implement advanced testing strategies in Angular?
+
+**Answer:**
+Comprehensive testing ensures application reliability and maintainability.
+
+**Unit Testing:**
+```typescript
+describe('UserComponent', () => {
+  let component: UserComponent;
+  let fixture: ComponentFixture<UserComponent>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [UserComponent],
+      providers: [
+        { provide: UserService, useValue: jasmine.createSpyObj('UserService', ['getUsers']) }
+      ]
+    }).compileComponents();
+  });
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(UserComponent);
+    component = fixture.componentInstance;
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('should load users on init', () => {
+    const userService = TestBed.inject(UserService);
+    const mockUsers = [{ id: 1, name: 'John' }];
+    userService.getUsers.and.returnValue(of(mockUsers));
+
+    component.ngOnInit();
+
+    expect(component.users).toEqual(mockUsers);
+  });
+});
+```
+
+**Integration Testing:**
+```typescript
+describe('User Integration', () => {
   let httpMock: HttpTestingController;
-  
+
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
       providers: [UserService]
     });
-    service = TestBed.inject(UserService);
     httpMock = TestBed.inject(HttpTestingController);
   });
-  
-  afterEach(() => {
-    httpMock.verify();
-  });
-  
-  it('should fetch users', () => {
-    const mockUsers: User[] = [
-      { id: 1, name: 'John', email: 'john@example.com' }
-    ];
-    
-    service.getUsers().subscribe(users => {
+
+  it('should fetch users from API', () => {
+    const userService = TestBed.inject(UserService);
+    const mockUsers = [{ id: 1, name: 'John' }];
+
+    userService.getUsers().subscribe(users => {
       expect(users).toEqual(mockUsers);
     });
-    
+
     const req = httpMock.expectOne('/api/users');
     expect(req.request.method).toBe('GET');
     req.flush(mockUsers);
   });
-  
-  it('should handle errors', () => {
-    service.getUsers().subscribe({
-      next: () => fail('should have failed'),
-      error: (error) => {
-        expect(error).toBeTruthy();
-      }
-    });
-    
-    const req = httpMock.expectOne('/api/users');
-    req.error(new ErrorEvent('Network error'));
-  });
 });
+```
 
-// Component Testing
-describe('UserListComponent', () => {
-  let component: UserListComponent;
-  let fixture: ComponentFixture<UserListComponent>;
-  let userService: jasmine.SpyObj<UserService>;
-  
-  beforeEach(async () => {
-    const spy = jasmine.createSpyObj('UserService', ['getUsers']);
-    
-    await TestBed.configureTestingModule({
-      declarations: [UserListComponent],
-      providers: [
-        { provide: UserService, useValue: spy }
-      ]
-    }).compileComponents();
-    
-    fixture = TestBed.createComponent(UserListComponent);
-    component = fixture.componentInstance;
-    userService = TestBed.inject(UserService) as jasmine.SpyObj<UserService>;
-  });
-  
-  it('should display users', () => {
-    const mockUsers: User[] = [
-      { id: 1, name: 'John', email: 'john@example.com' }
-    ];
-    userService.getUsers.and.returnValue(of(mockUsers));
-    
-    fixture.detectChanges();
-    
-    const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.user-name').textContent).toContain('John');
-  });
-  
-  it('should handle user selection', () => {
-    const mockUsers: User[] = [
-      { id: 1, name: 'John', email: 'john@example.com' }
-    ];
-    userService.getUsers.and.returnValue(of(mockUsers));
-    
-    fixture.detectChanges();
-    
-    const userElement = fixture.debugElement.query(By.css('.user-item'));
-    userElement.triggerEventHandler('click', null);
-    
-    expect(component.selectedUser).toEqual(mockUsers[0]);
-  });
-});
-
-// Integration Testing
-describe('User Management Integration', () => {
-  let fixture: ComponentFixture<AppComponent>;
-  let component: AppComponent;
-  
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [AppComponent],
-      imports: [RouterTestingModule, HttpClientTestingModule],
-      providers: [UserService]
-    }).compileComponents();
-    
-    fixture = TestBed.createComponent(AppComponent);
-    component = fixture.componentInstance;
-  });
-  
-  it('should navigate to user detail', fakeAsync(() => {
-    const router = TestBed.inject(Router);
-    spyOn(router, 'navigate');
-    
-    component.navigateToUser(1);
-    tick();
-    
-    expect(router.navigate).toHaveBeenCalledWith(['/users', 1]);
-  }));
-});
-
-// E2E Testing with Cypress
-// cypress/integration/user-management.spec.ts
-describe('User Management E2E', () => {
-  beforeEach(() => {
+**E2E Testing with Cypress:**
+```typescript
+describe('User Management', () => {
+  it('should create a new user', () => {
     cy.visit('/users');
-  });
-  
-  it('should display user list', () => {
-    cy.get('[data-cy=user-list]').should('be.visible');
-    cy.get('[data-cy=user-item]').should('have.length.greaterThan', 0);
-  });
-  
-  it('should create new user', () => {
     cy.get('[data-cy=add-user-btn]').click();
-    cy.get('[data-cy=user-form]').should('be.visible');
-    
-    cy.get('[data-cy=name-input]').type('Jane Doe');
-    cy.get('[data-cy=email-input]').type('jane@example.com');
-    cy.get('[data-cy=submit-btn]').click();
-    
-    cy.get('[data-cy=user-item]').should('contain', 'Jane Doe');
-  });
-  
-  it('should edit user', () => {
-    cy.get('[data-cy=user-item]').first().click();
-    cy.get('[data-cy=edit-btn]').click();
-    
-    cy.get('[data-cy=name-input]').clear().type('Updated Name');
+    cy.get('[data-cy=user-name]').type('John Doe');
+    cy.get('[data-cy=user-email]').type('john@example.com');
     cy.get('[data-cy=save-btn]').click();
-    
-    cy.get('[data-cy=user-item]').should('contain', 'Updated Name');
-  });
-});
-
-// Performance Testing
-describe('Performance Tests', () => {
-  it('should render large user list efficiently', () => {
-    const startTime = performance.now();
-    
-    const component = TestBed.createComponent(UserListComponent);
-    component.componentInstance.users = generateLargeUserList(10000);
-    component.detectChanges();
-    
-    const endTime = performance.now();
-    const renderTime = endTime - startTime;
-    
-    expect(renderTime).toBeLessThan(1000); // Should render in less than 1 second
-  });
-  
-  it('should handle memory leaks', () => {
-    const component = TestBed.createComponent(UserListComponent);
-    const initialMemory = (performance as any).memory?.usedJSHeapSize || 0;
-    
-    // Simulate component lifecycle
-    for (let i = 0; i < 100; i++) {
-      component.destroy();
-      TestBed.createComponent(UserListComponent);
-    }
-    
-    const finalMemory = (performance as any).memory?.usedJSHeapSize || 0;
-    const memoryIncrease = finalMemory - initialMemory;
-    
-    expect(memoryIncrease).toBeLessThan(10000000); // Less than 10MB increase
+    cy.get('[data-cy=user-list]').should('contain', 'John Doe');
   });
 });
 ```
 
-**Key Concepts:**
-- Unit testing
-- Component testing
-- Integration testing
-- E2E testing
-- Performance testing
-- Memory leak testing
+### 3. How do you implement advanced Angular patterns and best practices?
 
-#### 9. How do you implement advanced Angular patterns and best practices?
 **Answer:**
-Enterprise-level Angular patterns and architectural decisions:
+Advanced patterns improve code maintainability and scalability.
 
+**Repository Pattern:**
 ```typescript
-// Command Pattern for Undo/Redo
-export interface Command {
-  execute(): void;
-  undo(): void;
+export interface UserRepository {
+  getUsers(): Observable<User[]>;
+  getUserById(id: number): Observable<User>;
+  createUser(user: User): Observable<User>;
 }
 
-export class AddUserCommand implements Command {
+@Injectable()
+export class UserRepositoryImpl implements UserRepository {
+  constructor(private http: HttpClient) {}
+
+  getUsers(): Observable<User[]> {
+    return this.http.get<User[]>('/api/users');
+  }
+
+  getUserById(id: number): Observable<User> {
+    return this.http.get<User>(`/api/users/${id}`);
+  }
+
+  createUser(user: User): Observable<User> {
+    return this.http.post<User>('/api/users', user);
+  }
+}
+```
+
+**Command Pattern:**
+```typescript
+export interface Command {
+  execute(): Observable<any>;
+  undo(): Observable<any>;
+}
+
+export class CreateUserCommand implements Command {
   constructor(
-    private userService: UserService,
+    private userRepository: UserRepository,
     private user: User
   ) {}
-  
-  execute(): void {
-    this.userService.addUser(this.user);
+
+  execute(): Observable<User> {
+    return this.userRepository.createUser(this.user);
   }
-  
-  undo(): void {
-    this.userService.removeUser(this.user.id);
+
+  undo(): Observable<void> {
+    return this.userRepository.deleteUser(this.user.id);
   }
 }
+```
 
-@Injectable({
-  providedIn: 'root'
-})
-export class CommandService {
-  private history: Command[] = [];
-  private currentIndex = -1;
-  
-  execute(command: Command): void {
-    command.execute();
-    this.history = this.history.slice(0, this.currentIndex + 1);
-    this.history.push(command);
-    this.currentIndex++;
-  }
-  
-  undo(): void {
-    if (this.canUndo()) {
-      const command = this.history[this.currentIndex];
-      command.undo();
-      this.currentIndex--;
-    }
-  }
-  
-  redo(): void {
-    if (this.canRedo()) {
-      this.currentIndex++;
-      const command = this.history[this.currentIndex];
-      command.execute();
-    }
-  }
-  
-  canUndo(): boolean {
-    return this.currentIndex >= 0;
-  }
-  
-  canRedo(): boolean {
-    return this.currentIndex < this.history.length - 1;
-  }
-}
-
-// Observer Pattern for Event Handling
-@Injectable({
-  providedIn: 'root'
-})
+**Observer Pattern:**
+```typescript
+@Injectable()
 export class EventBus {
-  private events$ = new Subject<Event>();
-  
-  emit(event: Event): void {
+  private events$ = new Subject<AppEvent>();
+
+  publish(event: AppEvent): void {
     this.events$.next(event);
   }
-  
-  on<T extends Event>(eventType: new (...args: any[]) => T): Observable<T> {
+
+  subscribe<T extends AppEvent>(eventType: string): Observable<T> {
     return this.events$.pipe(
-      filter(event => event instanceof eventType),
+      filter(event => event.type === eventType),
       map(event => event as T)
     );
   }
 }
-
-export class UserCreatedEvent {
-  constructor(public user: User) {}
-}
-
-export class UserUpdatedEvent {
-  constructor(public user: User) {}
-}
-
-// Repository Pattern
-export interface UserRepository {
-  findAll(): Observable<User[]>;
-  findById(id: number): Observable<User>;
-  save(user: User): Observable<User>;
-  delete(id: number): Observable<void>;
-}
-
-@Injectable({
-  providedIn: 'root'
-})
-export class UserRepositoryImpl implements UserRepository {
-  constructor(private http: HttpClient) {}
-  
-  findAll(): Observable<User[]> {
-    return this.http.get<User[]>('/api/users');
-  }
-  
-  findById(id: number): Observable<User> {
-    return this.http.get<User>(`/api/users/${id}`);
-  }
-  
-  save(user: User): Observable<User> {
-    if (user.id) {
-      return this.http.put<User>(`/api/users/${user.id}`, user);
-    } else {
-      return this.http.post<User>('/api/users', user);
-    }
-  }
-  
-  delete(id: number): Observable<void> {
-    return this.http.delete<void>(`/api/users/${id}`);
-  }
-}
-
-// Factory Pattern for Component Creation
-export interface ComponentFactory<T> {
-  create(data: any): T;
-}
-
-@Injectable({
-  providedIn: 'root'
-})
-export class UserComponentFactory implements ComponentFactory<UserComponent> {
-  constructor(private componentFactoryResolver: ComponentFactoryResolver) {}
-  
-  create(user: User): UserComponent {
-    const factory = this.componentFactoryResolver.resolveComponentFactory(UserComponent);
-    const componentRef = factory.create(null);
-    componentRef.instance.user = user;
-    return componentRef.instance;
-  }
-}
-
-// Strategy Pattern for Different User Types
-export interface UserStrategy {
-  process(user: User): Observable<User>;
-}
-
-@Injectable({
-  providedIn: 'root'
-})
-export class AdminUserStrategy implements UserStrategy {
-  process(user: User): Observable<User> {
-    // Admin-specific processing
-    return of({ ...user, role: 'admin' });
-  }
-}
-
-@Injectable({
-  providedIn: 'root'
-})
-export class RegularUserStrategy implements UserStrategy {
-  process(user: User): Observable<User> {
-    // Regular user processing
-    return of({ ...user, role: 'user' });
-  }
-}
-
-@Injectable({
-  providedIn: 'root'
-})
-export class UserProcessingService {
-  private strategies = new Map<string, UserStrategy>();
-  
-  constructor(
-    private adminStrategy: AdminUserStrategy,
-    private regularStrategy: RegularUserStrategy
-  ) {
-    this.strategies.set('admin', adminStrategy);
-    this.strategies.set('regular', regularStrategy);
-  }
-  
-  processUser(user: User, type: string): Observable<User> {
-    const strategy = this.strategies.get(type);
-    if (!strategy) {
-      throw new Error(`No strategy found for type: ${type}`);
-    }
-    return strategy.process(user);
-  }
-}
-
-// Decorator Pattern for Logging
-export function LogMethod(target: any, propertyName: string, descriptor: PropertyDescriptor) {
-  const method = descriptor.value;
-  
-  descriptor.value = function (...args: any[]) {
-    console.log(`Calling ${propertyName} with args:`, args);
-    const result = method.apply(this, args);
-    console.log(`${propertyName} returned:`, result);
-    return result;
-  };
-}
-
-// Usage
-export class UserService {
-  @LogMethod
-  getUser(id: number): Observable<User> {
-    return this.http.get<User>(`/api/users/${id}`);
-  }
-}
 ```
 
-**Key Concepts:**
-- Design patterns
-- Command pattern
-- Observer pattern
-- Repository pattern
-- Factory pattern
-- Strategy pattern
-- Decorator pattern
+---
 
-### 🟣 Senior Level
+## 🟣 Senior Level (6+ years)
 
-#### 10. How do you design and implement scalable Angular architecture?
+### 1. How do you design and implement scalable Angular architecture?
+
 **Answer:**
-Enterprise-level architecture design and implementation:
+Scalable architecture ensures applications can grow and adapt to changing requirements.
 
+**Domain-Driven Design (DDD):**
 ```typescript
-// Domain-Driven Design Structure
-// domain/entities/user.entity.ts
+// Domain Layer
 export class User {
   constructor(
-    public readonly id: UserId,
-    public readonly name: UserName,
-    public readonly email: Email,
-    public readonly role: UserRole
+    private id: UserId,
+    private name: UserName,
+    private email: Email
   ) {}
-  
-  changeName(newName: UserName): User {
-    return new User(this.id, newName, this.email, this.role);
+
+  changeName(newName: UserName): void {
+    this.name = newName;
   }
-  
-  changeEmail(newEmail: Email): User {
-    return new User(this.id, this.name, newEmail, this.role);
+
+  isValid(): boolean {
+    return this.name.isValid() && this.email.isValid();
   }
 }
 
-// domain/value-objects/user-id.vo.ts
-export class UserId {
-  constructor(public readonly value: number) {
-    if (value <= 0) {
-      throw new Error('User ID must be positive');
-    }
-  }
-  
-  equals(other: UserId): boolean {
-    return this.value === other.value;
-  }
-}
-
-// domain/repositories/user.repository.ts
-export interface UserRepository {
-  findById(id: UserId): Promise<User>;
-  save(user: User): Promise<void>;
-  delete(id: UserId): Promise<void>;
-}
-
-// application/use-cases/create-user.use-case.ts
+// Application Layer
 @Injectable()
-export class CreateUserUseCase {
+export class UserApplicationService {
   constructor(
     private userRepository: UserRepository,
     private eventBus: EventBus
   ) {}
-  
-  async execute(command: CreateUserCommand): Promise<User> {
+
+  createUser(command: CreateUserCommand): Observable<UserId> {
     const user = new User(
-      new UserId(command.id),
+      UserId.generate(),
       new UserName(command.name),
-      new Email(command.email),
-      new UserRole(command.role)
+      new Email(command.email)
     );
-    
-    await this.userRepository.save(user);
-    this.eventBus.emit(new UserCreatedEvent(user));
-    
-    return user;
-  }
-}
 
-// infrastructure/persistence/user.repository.impl.ts
-@Injectable()
-export class UserRepositoryImpl implements UserRepository {
-  constructor(private http: HttpClient) {}
-  
-  async findById(id: UserId): Promise<User> {
-    const response = await this.http.get<any>(`/api/users/${id.value}`).toPromise();
-    return this.mapToDomain(response);
-  }
-  
-  async save(user: User): Promise<void> {
-    const dto = this.mapToDto(user);
-    await this.http.post('/api/users', dto).toPromise();
-  }
-  
-  private mapToDomain(dto: any): User {
-    return new User(
-      new UserId(dto.id),
-      new UserName(dto.name),
-      new Email(dto.email),
-      new UserRole(dto.role)
+    return this.userRepository.save(user).pipe(
+      tap(() => this.eventBus.publish(new UserCreatedEvent(user.id)))
     );
   }
-  
-  private mapToDto(user: User): any {
-    return {
-      id: user.id.value,
-      name: user.name.value,
-      email: user.email.value,
-      role: user.role.value
-    };
-  }
 }
+```
 
-// CQRS Implementation
-// commands/create-user.command.ts
+**CQRS Implementation:**
+```typescript
+// Command Side
 export class CreateUserCommand {
   constructor(
-    public readonly id: number,
-    public readonly name: string,
-    public readonly email: string,
-    public readonly role: string
+    public name: string,
+    public email: string
   ) {}
 }
 
-// commands/handlers/create-user.handler.ts
 @Injectable()
-export class CreateUserHandler {
-  constructor(
-    private userRepository: UserRepository,
-    private eventBus: EventBus
-  ) {}
-  
-  async handle(command: CreateUserCommand): Promise<void> {
-    const user = new User(
-      new UserId(command.id),
-      new UserName(command.name),
-      new Email(command.email),
-      new UserRole(command.role)
-    );
-    
-    await this.userRepository.save(user);
-    this.eventBus.emit(new UserCreatedEvent(user));
-  }
-}
-
-// queries/get-user.query.ts
-export class GetUserQuery {
-  constructor(public readonly id: number) {}
-}
-
-// queries/handlers/get-user.handler.ts
-@Injectable()
-export class GetUserHandler {
+export class CreateUserCommandHandler {
   constructor(private userRepository: UserRepository) {}
-  
-  async handle(query: GetUserQuery): Promise<User> {
-    return await this.userRepository.findById(new UserId(query.id));
+
+  handle(command: CreateUserCommand): Observable<UserId> {
+    const user = User.create(command.name, command.email);
+    return this.userRepository.save(user);
   }
 }
 
-// Event Sourcing
-// events/user-created.event.ts
-export class UserCreatedEvent {
-  constructor(
-    public readonly aggregateId: UserId,
-    public readonly eventId: string,
-    public readonly occurredOn: Date,
-    public readonly user: User
-  ) {}
+// Query Side
+export class GetUsersQuery {
+  constructor(public page: number, public size: number) {}
 }
 
-// event-store/event.store.ts
 @Injectable()
-export class EventStore {
-  private events: Event[] = [];
-  
-  append(event: Event): void {
-    this.events.push(event);
-  }
-  
-  getEvents(aggregateId: string): Event[] {
-    return this.events.filter(e => e.aggregateId === aggregateId);
+export class GetUsersQueryHandler {
+  constructor(private userReadModel: UserReadModel) {}
+
+  handle(query: GetUsersQuery): Observable<UserReadModel[]> {
+    return this.userReadModel.findUsers(query.page, query.size);
   }
 }
+```
 
-// Microservices Communication
-// services/user.service.ts
+**Clean Architecture:**
+```
+src/
+├── domain/           # Business logic
+│   ├── entities/
+│   ├── value-objects/
+│   └── repositories/
+├── application/      # Use cases
+│   ├── commands/
+│   ├── queries/
+│   └── services/
+├── infrastructure/   # External concerns
+│   ├── http/
+│   ├── database/
+│   └── messaging/
+└── presentation/     # UI layer
+    ├── components/
+    ├── pages/
+    └── shared/
+```
+
+---
+
+## 🎯 Topic-wise Questions
+
+### Core Angular Concepts
+
+#### What is Angular and how does it differ from AngularJS?
+
+**Answer:**
+Angular is a modern TypeScript-based framework, while AngularJS is the older JavaScript version.
+
+**Key Differences:**
+- **Architecture**: Component-based vs MVC
+- **Language**: TypeScript vs JavaScript
+- **Performance**: Much faster with Ivy renderer
+- **Mobile**: Better mobile support
+- **Learning Curve**: Steeper but more powerful
+
+#### Explain Angular modules and their purpose
+
+**Answer:**
+Modules organize related functionality and provide dependency injection context.
+
+**Example:**
+```typescript
+@NgModule({
+  declarations: [UserComponent],
+  imports: [CommonModule, FormsModule],
+  providers: [UserService],
+  exports: [UserComponent]
+})
+export class UserModule {}
+```
+
+### Data Binding & Communication
+
+#### Explain different types of data binding in Angular
+
+**Answer:**
+Angular supports four types of data binding:
+
+1. **Interpolation**: `{{value}}`
+2. **Property Binding**: `[property]="value"`
+3. **Event Binding**: `(event)="handler()"`
+4. **Two-way Binding**: `[(ngModel)]="value"`
+
+**Examples:**
+```html
+<!-- Interpolation -->
+<p>{{user.name}}</p>
+
+<!-- Property Binding -->
+<img [src]="user.avatar" [alt]="user.name">
+
+<!-- Event Binding -->
+<button (click)="onSave()">Save</button>
+
+<!-- Two-way Binding -->
+<input [(ngModel)]="user.name">
+```
+
+#### How do you pass data between parent and child components?
+
+**Answer:**
+Use `@Input()` and `@Output()` decorators for component communication.
+
+**Parent Component:**
+```typescript
+export class ParentComponent {
+  user = { name: 'John', age: 30 };
+  
+  onUserUpdated(user: User) {
+    console.log('User updated:', user);
+  }
+}
+```
+
+```html
+<app-child 
+  [user]="user" 
+  (userUpdated)="onUserUpdated($event)">
+</app-child>
+```
+
+**Child Component:**
+```typescript
+export class ChildComponent {
+  @Input() user: User;
+  @Output() userUpdated = new EventEmitter<User>();
+
+  updateUser() {
+    this.user.name = 'Jane';
+    this.userUpdated.emit(this.user);
+  }
+}
+```
+
+### Services & Dependency Injection
+
+#### What is dependency injection in Angular?
+
+**Answer:**
+Dependency injection is a design pattern where dependencies are provided to a class rather than created within it.
+
+**Example:**
+```typescript
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
-  constructor(
-    private http: HttpClient,
-    private config: AppConfig
-  ) {}
-  
   getUsers(): Observable<User[]> {
-    return this.http.get<User[]>(`${this.config.apiUrl}/users`);
-  }
-  
-  getUser(id: number): Observable<User> {
-    return this.http.get<User>(`${this.config.apiUrl}/users/${id}`);
+    return this.http.get<User[]>('/api/users');
   }
 }
 
-// Circuit Breaker Pattern
-@Injectable({
-  providedIn: 'root'
+export class UserComponent {
+  constructor(private userService: UserService) {}
+  
+  ngOnInit() {
+    this.userService.getUsers().subscribe(users => {
+      this.users = users;
+    });
+  }
+}
+```
+
+### Routing & Navigation
+
+#### How do you implement routing in Angular?
+
+**Answer:**
+Angular Router enables navigation between different views.
+
+**Setup:**
+```typescript
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'users', component: UserListComponent },
+  { path: 'users/:id', component: UserDetailComponent },
+  { path: '**', component: PageNotFoundComponent }
+];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
-export class CircuitBreakerService {
-  private failures = 0;
-  private lastFailureTime = 0;
-  private state: 'CLOSED' | 'OPEN' | 'HALF_OPEN' = 'CLOSED';
+export class AppRoutingModule {}
+```
+
+**Navigation:**
+```typescript
+export class UserComponent {
+  constructor(private router: Router) {}
   
-  constructor(private config: { threshold: number; timeout: number }) {}
-  
-  async execute<T>(operation: () => Promise<T>): Promise<T> {
-    if (this.state === 'OPEN') {
-      if (Date.now() - this.lastFailureTime > this.config.timeout) {
-        this.state = 'HALF_OPEN';
-      } else {
-        throw new Error('Circuit breaker is OPEN');
-      }
-    }
-    
-    try {
-      const result = await operation();
-      this.onSuccess();
-      return result;
-    } catch (error) {
-      this.onFailure();
-      throw error;
-    }
+  goToUser(id: number) {
+    this.router.navigate(['/users', id]);
   }
+}
+```
+
+### Forms & Validation
+
+#### What are template-driven forms in Angular?
+
+**Answer:**
+Template-driven forms use directives in the template to create form controls.
+
+**Example:**
+```html
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm)">
+  <input 
+    name="name" 
+    ngModel 
+    required 
+    #name="ngModel"
+    placeholder="Name">
+  <div *ngIf="name.invalid && name.touched">
+    Name is required
+  </div>
   
-  private onSuccess(): void {
-    this.failures = 0;
-    this.state = 'CLOSED';
+  <input 
+    name="email" 
+    ngModel 
+    email 
+    #email="ngModel"
+    placeholder="Email">
+  <div *ngIf="email.invalid && email.touched">
+    Valid email is required
+  </div>
+  
+  <button type="submit" [disabled]="userForm.invalid">
+    Submit
+  </button>
+</form>
+```
+
+#### How do you implement reactive forms in Angular?
+
+**Answer:**
+Reactive forms provide a model-driven approach to handling form inputs.
+
+**Example:**
+```typescript
+export class UserFormComponent implements OnInit {
+  userForm: FormGroup;
+
+  constructor(private fb: FormBuilder) {}
+
+  ngOnInit() {
+    this.userForm = this.fb.group({
+      name: ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      age: ['', [Validators.min(18), Validators.max(100)]]
+    });
   }
-  
-  private onFailure(): void {
-    this.failures++;
-    this.lastFailureTime = Date.now();
-    
-    if (this.failures >= this.config.threshold) {
-      this.state = 'OPEN';
+
+  onSubmit() {
+    if (this.userForm.valid) {
+      console.log(this.userForm.value);
     }
   }
 }
 ```
 
-**Key Concepts:**
-- Domain-Driven Design
-- CQRS (Command Query Responsibility Segregation)
-- Event Sourcing
-- Microservices architecture
-- Circuit Breaker pattern
-- Clean Architecture
-- SOLID principles
+```html
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <input formControlName="name" placeholder="Name">
+  <div *ngIf="userForm.get('name')?.invalid && userForm.get('name')?.touched">
+    Name is required
+  </div>
+  
+  <input formControlName="email" placeholder="Email">
+  <div *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">
+    Valid email is required
+  </div>
+  
+  <button type="submit" [disabled]="userForm.invalid">Submit</button>
+</form>
+```
 
-## 🎯 Practice Exercises
+### HTTP & API Integration
 
-### Intermediate
-1. Build a user management system with CRUD operations
-2. Implement a shopping cart with state management
-3. Create a dashboard with real-time data updates
+#### How do you make HTTP requests in Angular?
 
-### Advanced
-1. Design a micro-frontend architecture
-2. Implement a complex form with validation
-3. Build a real-time chat application
+**Answer:**
+Use Angular's HttpClient service for HTTP requests.
 
-### Expert
-1. Create a scalable enterprise application
-2. Implement advanced testing strategies
-3. Design a performance-optimized application
+**Service:**
+```typescript
+@Injectable({
+  providedIn: 'root'
+})
+export class UserService {
+  private apiUrl = 'https://api.example.com/users';
 
-### Senior
-1. Architect a multi-tenant SaaS application
-2. Design a microservices communication layer
-3. Implement advanced security patterns
+  constructor(private http: HttpClient) {}
 
-## 📚 Additional Resources
+  getUsers(): Observable<User[]> {
+    return this.http.get<User[]>(this.apiUrl);
+  }
 
-- [Angular Documentation](https://angular.io/docs)
-- [Angular Style Guide](https://angular.io/guide/styleguide)
-- [NgRx Documentation](https://ngrx.io/)
-- [Angular Testing Guide](https://angular.io/guide/testing)
-- [Angular Performance Guide](https://angular.io/guide/performance-checklist)
+  getUser(id: number): Observable<User> {
+    return this.http.get<User>(`${this.apiUrl}/${id}`);
+  }
+
+  createUser(user: User): Observable<User> {
+    return this.http.post<User>(this.apiUrl, user);
+  }
+
+  updateUser(id: number, user: User): Observable<User> {
+    return this.http.put<User>(`${this.apiUrl}/${id}`, user);
+  }
+
+  deleteUser(id: number): Observable<void> {
+    return this.http.delete<void>(`${this.apiUrl}/${id}`);
+  }
+}
+```
+
+**Component Usage:**
+```typescript
+export class UserComponent implements OnInit {
+  users: User[] = [];
+  loading = false;
+
+  constructor(private userService: UserService) {}
+
+  ngOnInit() {
+    this.loadUsers();
+  }
+
+  loadUsers() {
+    this.loading = true;
+    this.userService.getUsers().subscribe({
+      next: users => {
+        this.users = users;
+        this.loading = false;
+      },
+      error: error => {
+        console.error('Error loading users:', error);
+        this.loading = false;
+      }
+    });
+  }
+}
+```
+
+### Testing
+
+#### How do you write unit tests for Angular components?
+
+**Answer:**
+Use Angular Testing utilities for comprehensive component testing.
+
+**Example:**
+```typescript
+describe('UserComponent', () => {
+  let component: UserComponent;
+  let fixture: ComponentFixture<UserComponent>;
+  let userService: jasmine.SpyObj<UserService>;
+
+  beforeEach(async () => {
+    const spy = jasmine.createSpyObj('UserService', ['getUsers', 'createUser']);
+
+    await TestBed.configureTestingModule({
+      declarations: [UserComponent],
+      providers: [
+        { provide: UserService, useValue: spy }
+      ],
+      imports: [FormsModule, HttpClientTestingModule]
+    }).compileComponents();
+
+    fixture = TestBed.createComponent(UserComponent);
+    component = fixture.componentInstance;
+    userService = TestBed.inject(UserService) as jasmine.SpyObj<UserService>;
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+
+  it('should load users on init', () => {
+    const mockUsers = [
+      { id: 1, name: 'John', email: 'john@example.com' },
+      { id: 2, name: 'Jane', email: 'jane@example.com' }
+    ];
+    userService.getUsers.and.returnValue(of(mockUsers));
+
+    component.ngOnInit();
+
+    expect(component.users).toEqual(mockUsers);
+    expect(userService.getUsers).toHaveBeenCalled();
+  });
+
+  it('should create user when form is submitted', () => {
+    const newUser = { name: 'New User', email: 'new@example.com' };
+    userService.createUser.and.returnValue(of(newUser));
+    component.userForm.setValue(newUser);
+
+    component.onSubmit();
+
+    expect(userService.createUser).toHaveBeenCalledWith(newUser);
+  });
+});
+```
+
+### Performance & Optimization
+
+#### How do you optimize Angular application performance?
+
+**Answer:**
+Multiple strategies can improve Angular application performance.
+
+**1. OnPush Change Detection:**
+```typescript
+@Component({
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class UserComponent {
+  @Input() user: User;
+}
+```
+
+**2. TrackBy Functions:**
+```typescript
+export class UserListComponent {
+  trackByUserId(index: number, user: User): number {
+    return user.id;
+  }
+}
+```
+
+**3. Lazy Loading:**
+```typescript
+const routes: Routes = [
+  {
+    path: 'admin',
+    loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule)
+  }
+];
+```
+
+**4. Virtual Scrolling:**
+```html
+<cdk-virtual-scroll-viewport itemSize="50" class="viewport">
+  <div *cdkVirtualFor="let user of users" class="user-item">
+    {{ user.name }}
+  </div>
+</cdk-virtual-scroll-viewport>
+```
+
+**5. Memory Leak Prevention:**
+```typescript
+export class UserComponent implements OnDestroy {
+  private destroy$ = new Subject<void>();
+
+  ngOnInit() {
+    this.userService.getUsers()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(users => this.users = users);
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
+}
+```
+
+### Security
+
+#### How do you implement authentication in Angular?
+
+**Answer:**
+Implement authentication using JWT tokens and route guards.
+
+**Auth Service:**
+```typescript
+@Injectable({
+  providedIn: 'root'
+})
+export class AuthService {
+  private tokenKey = 'auth_token';
+  private userSubject = new BehaviorSubject<User | null>(null);
+  public user$ = this.userSubject.asObservable();
+
+  constructor(private http: HttpClient) {
+    this.loadUserFromStorage();
+  }
+
+  login(credentials: LoginCredentials): Observable<AuthResponse> {
+    return this.http.post<AuthResponse>('/api/auth/login', credentials)
+      .pipe(
+        tap(response => {
+          localStorage.setItem(this.tokenKey, response.token);
+          this.userSubject.next(response.user);
+        })
+      );
+  }
+
+  logout(): void {
+    localStorage.removeItem(this.tokenKey);
+    this.userSubject.next(null);
+  }
+
+  isAuthenticated(): boolean {
+    return !!localStorage.getItem(this.tokenKey);
+  }
+
+  private loadUserFromStorage(): void {
+    const token = localStorage.getItem(this.tokenKey);
+    if (token) {
+      // Decode token and set user
+      const user = this.decodeToken(token);
+      this.userSubject.next(user);
+    }
+  }
+}
+```
+
+**Auth Guard:**
+```typescript
+@Injectable()
+export class AuthGuard implements CanActivate {
+  constructor(
+    private authService: AuthService,
+    private router: Router
+  ) {}
+
+  canActivate(): boolean {
+    if (this.authService.isAuthenticated()) {
+      return true;
+    }
+    this.router.navigate(['/login']);
+    return false;
+  }
+}
+```
+
+---
+
+## 📊 Summary
+
+This comprehensive guide covers **75+ Angular interview questions** with detailed solutions, code examples, and best practices. The questions are organized by:
+
+- **🟢 Beginner Level**: Core concepts and basic implementation
+- **🟡 Intermediate Level**: Advanced features and performance optimization
+- **🔴 Advanced Level**: Architecture patterns and enterprise solutions
+- **🟣 Senior Level**: System design and scalable architecture
+
+Each question includes:
+- ✅ Detailed explanations
+- 💻 Practical code examples
+- 🎯 Best practices
+- 🔧 Implementation strategies
+
+This resource will help you prepare for Angular interviews at any experience level, from junior developers to senior architects!
