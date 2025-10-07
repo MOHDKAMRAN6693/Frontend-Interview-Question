@@ -1,0 +1,6 @@
+Company,Position,Applied Date,Status,Contact Person,Notes,Follow-up Date,Response Date,Interview Date,Salary Range,Location
+Sample Company A,Angular Developer,2024-01-15,Applied,John Doe,Referred by friend,2024-01-22,,,6-8 LPA,Noida
+Sample Company B,Senior Angular Dev,2024-01-16,Interview,Jane Smith,Phone screening done,2024-01-23,2024-01-20,2024-01-25,10-12 LPA,Noida
+Sample Company C,Angular Lead,2024-01-17,Rejected,HR Team,Not selected after technical round,2024-01-24,2024-01-22,,15+ LPA,Noida
+Sample Company D,Frontend Developer,2024-01-18,Pending,Recruiter,Waiting for response,2024-01-25,,,,8-10 LPA,Noida
+Sample Company E,Angular Architect,2024-01-19,Offer,Technical Lead,Received offer letter,2024-01-26,2024-01-24,2024-01-28,18-20 LPA,Noida
