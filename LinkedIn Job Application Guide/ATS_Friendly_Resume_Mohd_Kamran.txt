@@ -34,7 +34,7 @@ Built interactive Angular modules for enterprise workflows.
 Co-designed RESTful interfaces with backend teams.
 Resolved more than 120 defects (98 percent on-time SLA) and improved time to interactive (TTI) by 400 ms.
 Contributed features across shared Angular libraries and applications.
-Increased unit test coverage from approximately 55 percent to 75 percent and reduced regression bugs by 25 percent.
+Elevated unit test coverage from approximately 55 percent to 75 percent and reduced regression bugs by 25 percent.
 Applied modern web development practices across the stack.
 
 Education
@@ -46,10 +46,10 @@ High School, CBSE - 2014
 Projects
 Project 1: PRYPCO One Comprehensive PropTech Platform - UAE Client (Nov 2024 - Present)
 Environment: Angular v18, HTML, TypeScript, SCSS, Bootstrap, Airtable
-Delivered core modules - Project Listing, Property Management, Dashboard, Refer and Earn, and My Profile - on Angular 18 with NgRx Store.
+Implemented core modules - Project Listing, Property Management, Dashboard, Refer and Earn, and My Profile - on Angular 18 with NgRx Store.
 Added Mapbox-powered geospatial search and interactive maps.
 Instrumented analytics and controlled rollouts with Amplitude, Split.io, and Google Analytics.
-Enabled real-time support via Intercom.
+Established real-time support via Intercom.
 Upheld component architecture, responsive design, and unit testing to ensure quality and performance.
 Coordinated closely with backend teams for seamless RESTful API integration supporting property data, user profiles, and referral workflows.
 Empowered UAE real estate agents to generate leads, craft offers, and manage portfolios through targeted feature delivery.
