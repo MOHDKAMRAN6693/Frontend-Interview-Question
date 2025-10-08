@@ -1,0 +1,81 @@
+Kuldeep Sharma
+149, Mai Bateshwar, Agra (U.P.) Mob: +91-7678107639
+Email: kuldeepsharmamai@gmail.com
+
+
+Career Objective
+A Professional Challenging Career which will provide opportunities for continuous growth and learning with a dynamic organization that values individual contribution. To work with full dedication, gaining professional skills, competence, and excellence that will develop my personality and enrich my experience.
+Professional Qualifications
+B.Sc. in Computer Science from Dayalbagh University (U.P.), 2020
+Technical Skills
+Web Technologies: Angular, AngularJS, Angular Material, HTML5, CSS3, JavaScript, Bootstrap, Typescript, NgRx/RxJs, Express.js/Node.js, Capacitor.js, REST API
+Databases: MySQL, MongoDB
+Development IDE: Visual Studio Code
+Version Control Tools: GIT, Azure DevOps
+Work Experience
+Walking Tree Technologies
+Software Engineer Oct 2023 - Present
+Developed and maintained web applications using Angular.
+Collaborated with cross-functional teams to define, design, and ship new features.
+Improved application performance and implemented security measures.
+Working on new latest app using Ngrx, Skote theme with Angular 17.
+Hansa Info Solutions (OKS Group)
+Software Developer Jun 2021 - Sept 2023
+Created dynamic and interactive web applications using Angular and Angular.
+Participated in the design and development of Restful APIs.
+Fixed bugs and optimized code for better performance.
+OKS Education Pvt. Ltd.
+IT Trainee
+Jun 2020 - May 2021
+Assisted in the development of web applications.
+Conducted testing and debugging of software applications.
+Gained experience in various web technologies and development practices.
+
+
+Education
+B.Sc. (Computer Science), Dayalbagh University - 2020
+Intermediate, CBSE - 2016
+High School, CBSE - 2014
+
+
+Projects
+Project 1: User Management and Performance Dashboards (June 2021 - Oct 2023)
+Environment: Angular, Angular Material, HTML, Typescript, CSS, Bootstrap, SQL, Node.js
+Developed a website for an ed-tech startup for user management and performance dashboards.
+Implemented various functionalities and modules.
+Created UI components and fixed bugs.
+Developed a User Subscription Model and backend APIs.
+Added "Forgot Password" functionality and data export to Excel.
+Project 2: Upgrade and Maintenance Tool (June 2020 - May 2021)
+Environment: Angular, Angular Material, HTML, Typescript, CSS, Bootstrap, SQL, Node.js, MongoDb
+Merged functionalities from previous websites for user management.
+Developed new UI components and fixed bugs.
+Migrated user registration from Liferay to the company’s server.
+URL: https://dev.marksharksplus.com
+Project 3: FracPro (App for Managing users & operations over the globe) (Oct 2023 - Jul 2024 )
+Environment: Angular, Angular Material, HTML, Typescript, CSS, Bootstrap, Chart.js
+Worked on various module enhancement like pricing, user roles, widgets.
+Developed new UI components and fixed bugs in US based app.
+Worked on integration of different modules to help operations, manage users, forecasting data.
+
+Project 4: FracProPlus (Angular 17 project using Skote Theme) (Sep 2024 - Now )
+Environment: Angular 17, Angular Material, HTML, Typescript, NgRx, CSS, Bootstrap
+Worked on module like Profile, Job Tables, Dashboard using Skote theme design with NgRx.
+Developed new UI components as per the Fig-ma and theme library.
+Worked on API integration on REST API as well as third party library and connect apps.
+
+
+
+Key Skills
+Accuracy and Attention to detail
+Self-motivated with high energy levels
+Decision making and critical thinking
+Organizing and planning
+Adaptability and ability to work under pressure
+
+
+Declaration
+I, Kuldeep Sharma, hereby declare that the information given in this CV is true to the best of my knowledge and belief.
+
+
+Date: 01/12/2024 Place: Agra Kuldeep Sharma
