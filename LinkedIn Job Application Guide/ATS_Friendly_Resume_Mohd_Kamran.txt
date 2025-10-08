@@ -78,6 +78,7 @@ Produced dynamic forms and interactive charts, yielding a 25 percent surge in pl
 Automated builds and releases with Azure DevOps Pipelines for faster, stable deployments.
 Aligned features with end-user needs, emphasizing simplicity, performance, and accessibility.
 Enforced role-based access control with minimal performance overhead for admins, teachers, and students.
+
 Key Skills
 Accuracy and attention to detail
 Self-motivated with high energy
