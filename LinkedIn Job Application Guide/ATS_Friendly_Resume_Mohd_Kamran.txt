@@ -1,40 +1,40 @@
 Mohd Kamran
-Address: Greater Noida West, India
+Address: Greater Noida (West), India
 Mobile: +91-7906451993
 LinkedIn: https://linkedin.com/in/mohd-kamran-23bb22201
 Email: mohd.kamran6693@gmail.com
 
 Summary
-Frontend Software Engineer with more than 3 years of experience building user-centric, high-performance web applications using modern frameworks in Agile teams; strong problem-solving and collaboration skills.
+Frontend Software Engineer with over 3 years of experience building user-centric, high-performance web applications using modern frameworks in Agile environments; strong in problem-solving and collaboration.
 
 Professional Qualifications
-Master of Computer Applications (MCA), Dr. Bhim Rao Ambedkar University, Agra - 2022.
+Master of Computer Applications (MCA), Dr. Bhimrao Ambedkar University, Agra – 2022
 
 Technical Skills
 Web Technologies: Angular (v12-v18), Angular CLI, TypeScript, JavaScript (ES6 and later), HTML5, CSS3, SCSS
 State Management: NgRx Store, RxJS, Reactive Programming
 UI/UX: Angular Material, Bootstrap, Tailwind CSS, Responsive Web Design, Cross-Browser Compatibility
 Development Tools: Git, GitHub, Azure DevOps, Jira
-APIs and Integration: RESTful API Integration, HTTP Client Module, JSON Handling
+API Integration: RESTful API Integration, HTTP Client Module, JSON Handling
 Methodologies: Agile, Scrum
 
 Work Experience
 InnovationM Mobile and Web Technologies Pvt. Ltd
 Software Engineer, Nov 2024 - Present
 Shipped Angular features and maintenance updates across multiple modules.
-Partnered with cross-functional teams to translate requirements into scalable, responsive front-end UIs in an Agile (Scrum) environment.
-Optimized performance (-28 percent LCP, -18 percent bundle size) and tightened client-side security controls.
+Partnered with cross-functional teams to translate requirements into scalable, responsive front-end UIs within an Agile (Scrum) environment.
+Optimized performance (–28% LCP, –18% bundle size) and strengthened client-side security controls.
 Architected a new Angular 18 application with NgRx and the Skote theme.
 Orchestrated sprint workflows in Jira for clear progress tracking and delivery.
-Streamlined CI/CD with GitHub and Azure Pipelines, cutting deployment time by approximately 40 percent and failures by 30 percent.
+Streamlined CI/CD with GitHub and Azure Pipelines, reducing deployment time by ~40% and failures by 30%.
 
 Walking Tree Technologies Pvt. Ltd
 Software Engineer, Jan 2022 - Sep 2024
 Built interactive Angular modules for enterprise workflows.
 Co-designed RESTful interfaces with backend teams.
-Resolved more than 120 defects (98 percent on-time SLA) and improved time to interactive (TTI) by 400 ms.
+Resolved over 120 defects (98% on-time SLA) and improved Time to Interactive (TTI) by 400 ms.
 Contributed features across shared Angular libraries and applications.
-Elevated unit test coverage from approximately 55 percent to 75 percent and reduced regression bugs by 25 percent.
+Elevated unit test coverage from ~55% to 75%, reducing regression bugs by 25%.
 Applied modern web development practices across the stack.
 
 Education
@@ -46,7 +46,7 @@ High School, CBSE - 2014
 Projects
 Project 1: PRYPCO One Comprehensive PropTech Platform - UAE Client (Nov 2024 - Present)
 Environment: Angular v18, HTML, TypeScript, SCSS, Bootstrap, Airtable
-Implemented core modules - Project Listing, Property Management, Dashboard, Refer and Earn, and My Profile - on Angular 18 with NgRx Store.
+Implemented core modules — Project Listing, Property Management, Dashboard, Refer & Earn, and My Profile — in Angular 18 with NgRx Store.
 Added Mapbox-powered geospatial search and interactive maps.
 Instrumented analytics and controlled rollouts with Amplitude, Split.io, and Google Analytics.
 Established real-time support via Intercom.
@@ -63,7 +63,7 @@ Enabled offline-first workflows with IndexedDB to support low-connectivity data 
 Facilitated Scrum ceremonies for planning, updates, and risk tracking.
 Managed work in Azure Boards and automated delivery via Azure Pipelines for reliable releases.
 Cut ticket-approval turnaround by 40 percent through UX and workflow optimizations.
-Authored clear ticket documentation to align stakeholders and speed reviews.
+Authored clear ticket documentation to align stakeholders and accelerate reviews.
 Integrated JWT-based authentication and Chart.js visualizations with cross-functional partners.
 Increased operational efficiency by 20 percent via process automation and effective module design.
 
@@ -72,7 +72,7 @@ Environment: Angular v12, Angular Material, HTML, TypeScript, CSS, Bootstrap, Ch
 Built D3.js dashboards for student progress and performance insights.
 Delivered resilient offline access via IndexedDB for low-connectivity regions.
 Crafted lightweight, multilingual, role-based UIs for low-end devices to increase accessibility.
-Raised course completion by 20 percent for more than 500 students through enhanced content delivery and UI workflows.
+Raised course completion rates by 20% among over 500 students through enhanced content delivery and UI workflows.
 Applied Bootstrap and Tailwind CSS to enhance navigation and responsive layouts.
 Produced dynamic forms and interactive charts, yielding a 25 percent surge in platform usage and engagement.
 Automated builds and releases with Azure DevOps Pipelines for faster, stable deployments.
@@ -88,4 +88,3 @@ Adaptability and ability to work under pressure
 Declaration
 I, Mohd Kamran, hereby declare that the information provided in this CV is true and correct to the best of my knowledge and belief.
 Date: 08 Oct 2025; Place: Greater Noida (West)
-
