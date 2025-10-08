@@ -1,6 +1,6 @@
 Mohd Kamran
-Address: Greater Noida West, India 
-Mob: +91-7906451993
+Address: Greater Noida West, India
+Mobile: +91-7906451993
 LinkedIn: https://linkedin.com/in/mohd-kamran-23bb22201
 Email: mohd.kamran6693@gmail.com
 
@@ -20,26 +20,26 @@ Work Experience
 InnovationM Mobile and Web Technologies Pvt. Ltd
 Software Engineer, Nov 2024 – Present
 Shipped Angular features and maintenance updates across multiple modules.
-Partnered with cross-functional teams to translate requirements into scalable, responsive frontends in an Agile (Scrum) environment.
+Partnered with cross-functional teams to translate requirements into scalable, responsive front‑end UIs in an Agile (Scrum) environment.
 Optimized performance (−28% LCP, −18% bundle size) and tightened client-side security controls.
-Architecting a new Angular 18 application with NgRx and the Skote theme.
+Architected a new Angular 18 application with NgRx and the Skote theme.
 Orchestrated sprint workflows in Jira for clear progress tracking and delivery.
-Streamlined CI/CD with GitHub and Azure Pipelines, cutting deploy time ~40% and failures −30%.
+Streamlined CI/CD with GitHub and Azure Pipelines, cutting deployment time by ~40% and failures by 30%.
 
 Walking Tree Technologies Pvt. Ltd
 Software Engineer, Jan 2022 – Sep 2024
 Built interactive Angular modules for enterprise workflows.
 Co-designed RESTful interfaces with backend teams.
-Resolved 120+ defects (98% on‑time SLA) and improved rendering (−400ms TTI).
+Resolved 120+ defects (98% on‑time SLA) and improved time to interactive (TTI) by 400 ms.
 Contributed features across shared Angular libraries and applications.
-Increased unit test coverage from ~55%→75% and reduced regression bugs −25%.
+Increased unit test coverage from ~55% to 75% and reduced regression bugs by 25%.
 Applied modern web development practices across the stack.
 
 Education
-Master of Computer Applications (MCA), Dr. Bhim Rao Ambedkar University - 2022
-Bachelor of Computer Applications (BCA), Dr. Bhim Rao Ambedkar University - 2020
-Intermediate, CBSE - 2016
-High School, CBSE - 2014
+Master of Computer Applications (MCA), Dr. Bhim Rao Ambedkar University — 2022
+Bachelor of Computer Applications (BCA), Dr. Bhim Rao Ambedkar University — 2020
+Intermediate, CBSE — 2016
+High School, CBSE — 2014
 
 Projects
 Project 1: PRYPCO One Comprehensive PropTech Platform – UAE Client (Nov 2024 - Present)
@@ -65,7 +65,7 @@ Authored clear ticket documentation to align stakeholders and speed reviews.
 Integrated JWT-based authentication and Chart.js visualizations with cross-functional partners.
 Increased operational efficiency by 20% via process automation and effective module design.
 
-Project 3: RISHI VALLEY Ed-Tech Platform – Rural Digital Learning with Offline Access (Jan 2022 - Oct 2022)
+Project 3: RISHI VALLEY EdTech Platform – Rural Digital Learning with Offline Access (Jan 2022 – Oct 2022)
 Environment: Angular v12, Angular Material, HTML, TypeScript, CSS, Bootstrap, Chart.js
 Built D3.js dashboards for student progress and performance insights.
 Delivered resilient offline access via IndexedDB for low-connectivity regions.
