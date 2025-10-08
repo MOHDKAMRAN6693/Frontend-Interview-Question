@@ -9,7 +9,7 @@
 
 ## PROFESSIONAL SUMMARY
 
-Frontend Software Engineer with 4+ years of experience developing scalable web applications using Angular, TypeScript, and modern JavaScript frameworks. Proven expertise in building high-performance, responsive applications with strong focus on user experience, performance optimization, and agile development methodologies.
+Frontend Software Engineer with 4+ years of experience building scalable web applications using Angular, TypeScript, and modern JavaScript. Proven track record of delivering high-performance, responsive interfaces with a strong focus on user experience, performance optimization, and Agile delivery.
 
 ---
 
@@ -17,12 +17,12 @@ Frontend Software Engineer with 4+ years of experience developing scalable web a
 
 **Frontend Technologies:** Angular (v12-v18), Angular CLI, TypeScript, JavaScript (ES6+), HTML5, CSS3, SCSS, SASS  
 **State Management:** NgRx Store, RxJS, Reactive Programming  
-**UI/UX:** Angular Material, Bootstrap, Tailwind CSS, Responsive Web Design, Cross-Browser Compatibility  
-**Testing:** Unit Testing (Jasmine, Karma, Jest), Component Testing  
+**UI/UX:** Angular Material, Bootstrap, Tailwind CSS, Responsive Web Design, Cross-browser compatibility  
+**Testing:** Unit testing (Jasmine, Karma, Jest), Component testing  
 **Development Tools:** Git, GitHub, Bitbucket, Azure DevOps, Jira  
-**APIs & Integration:** RESTful API Integration, HTTP Client Module, JSON Handling  
-**Performance:** Web Performance Optimization, Code Splitting, Lazy Loading  
-**Methodologies:** Agile, Scrum, CI/CD Pipelines  
+**APIs & Integration:** RESTful APIs, HTTP Client Module, JSON handling  
+**Performance:** Web performance optimization, Code splitting, Lazy loading  
+**Methodologies:** Agile, Scrum, CI/CD  
 
 ---
 
@@ -32,13 +32,13 @@ Frontend Software Engineer with 4+ years of experience developing scalable web a
 **InnovationM Mobile and Web Technologies Pvt. Ltd** | Nov 2024 – Present | Noida, India
 
 **Key Project: PRYPCO One - PropTech Platform (UAE Market)**
-- Developed comprehensive property management platform using Angular 18+ with NgRx Store for efficient state management
-- Integrated Mapbox for interactive geolocation-based property searches and enhanced user experience
-- Implemented Amplitude Event Tracking, Split.io Feature Flagging, and Google Analytics for advanced analytics and A/B testing
-- Integrated Intercom live chat support for improved customer communication
-- Collaborated with cross-functional teams in Agile/Scrum environment for scalable, responsive solutions
-- Managed ticket workflow using Jira and automated deployments through Azure DevOps
-- Achieved 40% improvement in ticket approval turnaround time through optimized UI/UX workflows
+- Built a comprehensive property management platform using Angular 18+ with NgRx Store for efficient state management
+- Integrated Mapbox for interactive, geolocation-based property search to enhance user experience
+- Implemented Amplitude event tracking, Split.io feature flagging, and Google Analytics for advanced analytics and A/B testing
+- Added Intercom live chat support to improve customer communication
+- Collaborated with cross-functional teams in an Agile/Scrum environment to deliver scalable, responsive solutions
+- Managed ticket workflows using Jira and automated deployments via Azure DevOps
+- Improved ticket approval turnaround time by 40% through optimized UI/UX workflows
 
 **Technologies:** Angular 18+, NgRx, TypeScript, Mapbox, Amplitude, Split.io, Google Analytics, Intercom, Azure DevOps
 
@@ -48,21 +48,21 @@ Frontend Software Engineer with 4+ years of experience developing scalable web a
 **WalkingTree Technologies Pvt. Ltd** | Jan 2022 – Oct 2024 | Noida, India
 
 **Key Project: FRACPRO OPS - Oilfield Operations Management Platform**
-- Developed Field Ticketing and Signature Module using Angular 12 and Spring Boot for digitized oilfield operations
-- Implemented real-time form validations, multi-stage logging workflows, and secure digital signature flows
-- Designed Invoice Tracking and Management System improving billing transparency and operational tracking
-- Integrated IndexedDB for offline functionality ensuring uninterrupted data entry in low-connectivity environments
-- Managed ticket lifecycle using Azure DevOps and automated deployments via Azure Pipelines
-- Improved operational efficiency by 20% through process automation and effective module design
-- Enhanced ticket approval turnaround time by 40% through user-centric UI/UX improvements
+- Developed field ticketing and signature modules using Angular 12 and Spring Boot to digitize oilfield operations
+- Implemented real-time form validation, multi-stage logging workflows, and secure digital signature flows
+- Designed an invoice tracking and management system that improved billing transparency and operational tracking
+- Integrated IndexedDB for offline functionality, ensuring uninterrupted data entry in low-connectivity environments
+- Managed the ticket lifecycle using Azure DevOps and automated deployments via Azure Pipelines
+- Increased operational efficiency by 20% through process automation and effective module design
+- Reduced ticket approval turnaround time by 40% through user-centric UI/UX improvements
 
 **Key Project: RISHI VALLEY - Ed-Tech Platform (Rural Digital Learning)**
-- Developed interactive data visualization dashboards using D3.js for student learning progress and performance metrics
-- Implemented IndexedDB-based offline data storage for uninterrupted learning in low-connectivity rural regions
-- Designed lightweight, multilingual, role-based UI interfaces for low-end devices improving accessibility
-- Enhanced online learning platform driving 20% increase in course completion rates for 500+ students
-- Built dynamic forms and interactive charts with D3.js resulting in 25% surge in platform usage
-- Automated application build and release process using Azure DevOps Pipelines
+- Developed interactive data-visualization dashboards using D3.js for student progress and performance metrics
+- Implemented IndexedDB-based offline storage for uninterrupted learning in low-connectivity regions
+- Designed lightweight, multilingual, role-based interfaces for low-end devices, improving accessibility
+- Enhanced the online learning platform, driving a 20% increase in course completion rates for 500+ students
+- Built dynamic forms and interactive charts with D3.js, resulting in a 25% surge in platform usage
+- Automated the build and release process using Azure DevOps Pipelines
 
 **Technologies:** Angular 12+, TypeScript, D3.js, IndexedDB, Bootstrap, Tailwind CSS, Azure DevOps, Chart.js
 
@@ -96,12 +96,12 @@ Dr. Bhimrao Ambedkar University, Agra | Aug 2017 – Aug 2020
 
 ## KEY ACCOMPLISHMENTS
 
-- **Performance Optimization:** Achieved 40% improvement in ticket approval turnaround time through UI/UX optimization
-- **Operational Efficiency:** Boosted overall operational efficiency by 20% through process automation
-- **User Engagement:** Increased course completion rates by 20% for 500+ students in Ed-Tech platform
-- **Platform Usage:** Achieved 25% surge in platform usage through dynamic forms and interactive charts
+- **Performance Optimization:** Improved ticket approval turnaround time by 40% through UI/UX optimization
+- **Operational Efficiency:** Boosted overall efficiency by 20% through process automation
+- **User Engagement:** Increased course completion rates by 20% for 500+ students on an ed-tech platform
+- **Platform Usage:** Drove a 25% surge in platform usage through dynamic forms and interactive charts
 - **Code Quality:** Maintained high code quality through component-based architecture and unit testing
-- **Team Collaboration:** Successfully managed cross-functional teams in Agile/Scrum environments
+- **Team Collaboration:** Collaborated effectively with cross-functional teams in Agile/Scrum environments
 
 ---
 
