@@ -21,18 +21,18 @@ InnovationM Mobile and Web Technologies Pvt. Ltd
 Software Engineer, Nov 2024 – Present
 Shipped Angular features and maintenance updates across multiple modules.
 Partnered with cross-functional teams to translate requirements into scalable, responsive frontends in an Agile (Scrum) environment.
-Optimized performance and strengthened client-side security controls.
+Optimized performance (−28% LCP, −18% bundle size) and tightened client-side security controls.
 Architecting a new Angular 18 application with NgRx and the Skote theme.
 Orchestrated sprint workflows in Jira for clear progress tracking and delivery.
-Streamlined CI/CD using GitHub for source control and Azure DevOps pipelines.
+Streamlined CI/CD with GitHub and Azure Pipelines, cutting deploy time ~40% and failures −30%.
 
 Walking Tree Technologies Pvt. Ltd
 Software Engineer, Jan 2022 – Sep 2024
 Built interactive Angular modules for enterprise workflows.
 Co-designed RESTful interfaces with backend teams.
-Resolved defects and tuned code for faster rendering.
+Resolved 120+ defects (98% on‑time SLA) and improved rendering (−400ms TTI).
 Contributed features across shared Angular libraries and applications.
-Performed unit testing and thorough debugging to ensure reliability.
+Increased unit test coverage from ~55%→75% and reduced regression bugs −25%.
 Applied modern web development practices across the stack.
 
 Education
