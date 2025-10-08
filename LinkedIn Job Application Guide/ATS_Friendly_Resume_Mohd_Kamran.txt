@@ -11,10 +11,10 @@ Professional Qualifications
 Master of Computer Applications (MCA), Dr. Bhimrao Ambedkar University, Agra – 2022
 
 Technical Skills
-Web Technologies: Angular (v12-v18), Angular CLI, TypeScript, JavaScript (ES6 and later), HTML5, CSS3, SCSS
+Web Technologies: Angular (v12-v18), Angular CLI, TypeScript, JavaScript (ES6+), HTML5, CSS3, SCSS
 State Management: NgRx Store, RxJS, Reactive Programming
 UI/UX: Angular Material, Bootstrap, Tailwind CSS, Responsive Web Design, Cross-Browser Compatibility
-Development Tools: Git, GitHub, Azure DevOps, Jira
+Development Tools: Git, GitHub, Azure DevOps
 API Integration: RESTful API Integration, HTTP Client Module, JSON Handling
 Methodologies: Agile, Scrum
 
@@ -38,8 +38,8 @@ Elevated unit test coverage from ~55% to 75%, reducing regression bugs by 25%.
 Applied modern web development practices across the stack.
 
 Education
-Master of Computer Applications (MCA), Dr. Bhim Rao Ambedkar University - 2022
-Bachelor of Computer Applications (BCA), Dr. Bhim Rao Ambedkar University - 2020
+Master of Computer Applications (MCA), Dr. Bhimrao Ambedkar University - 2022
+Bachelor of Computer Applications (BCA), Dr. Bhimrao Ambedkar University - 2020
 Intermediate, CBSE - 2016
 High School, CBSE - 2014
 
