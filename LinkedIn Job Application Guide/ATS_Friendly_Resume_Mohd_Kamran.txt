@@ -5,48 +5,48 @@ LinkedIn: https://linkedin.com/in/mohd-kamran-23bb22201
 Email: mohd.kamran6693@gmail.com
 
 Summary
-Frontend Software Engineer with 3+ years of experience building user-centric, high-performance web applications using modern frameworks in Agile teams; strong problem-solving and collaboration skills.
+Frontend Software Engineer with more than 3 years of experience building user-centric, high-performance web applications using modern frameworks in Agile teams; strong problem-solving and collaboration skills.
 
 Professional Qualifications
-Master of Computer Applications (MCA), Dr. Bhim Rao Ambedkar University, Agra — 2022.
+Master of Computer Applications (MCA), Dr. Bhim Rao Ambedkar University, Agra - 2022.
 
 Technical Skills
-Web Technologies: Angular (v12–v18), Angular CLI, TypeScript, JavaScript (ES6+), HTML5, CSS3, SCSS
+Web Technologies: Angular (v12-v18), Angular CLI, TypeScript, JavaScript (ES6 and later), HTML5, CSS3, SCSS
 State Management: NgRx Store, RxJS, Reactive Programming
 UI/UX: Angular Material, Bootstrap, Tailwind CSS, Responsive Web Design, Cross-Browser Compatibility
 Development Tools: Git, GitHub, Azure DevOps, Jira
-APIs & Integration: RESTful API Integration, HTTP Client Module, JSON Handling
+APIs and Integration: RESTful API Integration, HTTP Client Module, JSON Handling
 Methodologies: Agile, Scrum
 
 Work Experience
 InnovationM Mobile and Web Technologies Pvt. Ltd
-Software Engineer, Nov 2024 – Present
+Software Engineer, Nov 2024 - Present
 Shipped Angular features and maintenance updates across multiple modules.
-Partnered with cross-functional teams to translate requirements into scalable, responsive front‑end UIs in an Agile (Scrum) environment.
-Optimized performance (−28% LCP, −18% bundle size) and tightened client-side security controls.
+Partnered with cross-functional teams to translate requirements into scalable, responsive front-end UIs in an Agile (Scrum) environment.
+Optimized performance (-28 percent LCP, -18 percent bundle size) and tightened client-side security controls.
 Architected a new Angular 18 application with NgRx and the Skote theme.
 Orchestrated sprint workflows in Jira for clear progress tracking and delivery.
-Streamlined CI/CD with GitHub and Azure Pipelines, cutting deployment time by ~40% and failures by 30%.
+Streamlined CI/CD with GitHub and Azure Pipelines, cutting deployment time by approximately 40 percent and failures by 30 percent.
 
 Walking Tree Technologies Pvt. Ltd
-Software Engineer, Jan 2022 – Sep 2024
+Software Engineer, Jan 2022 - Sep 2024
 Built interactive Angular modules for enterprise workflows.
 Co-designed RESTful interfaces with backend teams.
-Resolved 120+ defects (98% on‑time SLA) and improved time to interactive (TTI) by 400 ms.
+Resolved more than 120 defects (98 percent on-time SLA) and improved time to interactive (TTI) by 400 ms.
 Contributed features across shared Angular libraries and applications.
-Increased unit test coverage from ~55% to 75% and reduced regression bugs by 25%.
+Increased unit test coverage from approximately 55 percent to 75 percent and reduced regression bugs by 25 percent.
 Applied modern web development practices across the stack.
 
 Education
-Master of Computer Applications (MCA), Dr. Bhim Rao Ambedkar University — 2022
-Bachelor of Computer Applications (BCA), Dr. Bhim Rao Ambedkar University — 2020
-Intermediate, CBSE — 2016
-High School, CBSE — 2014
+Master of Computer Applications (MCA), Dr. Bhim Rao Ambedkar University - 2022
+Bachelor of Computer Applications (BCA), Dr. Bhim Rao Ambedkar University - 2020
+Intermediate, CBSE - 2016
+High School, CBSE - 2014
 
 Projects
-Project 1: PRYPCO One Comprehensive PropTech Platform – UAE Client (Nov 2024 - Present)
+Project 1: PRYPCO One Comprehensive PropTech Platform - UAE Client (Nov 2024 - Present)
 Environment: Angular v18, HTML, TypeScript, SCSS, Bootstrap, Airtable
-Delivered core modules—Project Listing, Property Management, Dashboard, Refer & Earn, and My Profile—on Angular 18 with NgRx Store.
+Delivered core modules - Project Listing, Property Management, Dashboard, Refer and Earn, and My Profile - on Angular 18 with NgRx Store.
 Added Mapbox-powered geospatial search and interactive maps.
 Instrumented analytics and controlled rollouts with Amplitude, Split.io, and Google Analytics.
 Enabled real-time support via Intercom.
@@ -54,29 +54,29 @@ Upheld component architecture, responsive design, and unit testing to ensure qua
 Coordinated closely with backend teams for seamless RESTful API integration supporting property data, user profiles, and referral workflows.
 Empowered UAE real estate agents to generate leads, craft offers, and manage portfolios through targeted feature delivery.
 
-Project 2: FRACPRO OPS Oilfield Operations Management Platform – US Client (Nov 2022 - Sep 2024)
+Project 2: FRACPRO OPS Oilfield Operations Management Platform - US Client (Nov 2022 - Sep 2024)
 Environment: Angular v12, Angular Material, HTML, TypeScript, CSS, Bootstrap, MongoDB
-Engineered Field Ticketing and Signature modules in Angular 12 + Spring Boot to digitize oilfield operations.
+Engineered Field Ticketing and Signature modules in Angular 12 and Spring Boot to digitize oilfield operations.
 Built real-time validations, multi-stage logging, and secure signature flows (DocuSign-style) to ensure accuracy and traceability.
 Launched invoice tracking and management for transparent billing and operational oversight.
 Enabled offline-first workflows with IndexedDB to support low-connectivity data entry.
 Facilitated Scrum ceremonies for planning, updates, and risk tracking.
 Managed work in Azure Boards and automated delivery via Azure Pipelines for reliable releases.
-Cut ticket-approval turnaround by 40% through UX and workflow optimizations.
+Cut ticket-approval turnaround by 40 percent through UX and workflow optimizations.
 Authored clear ticket documentation to align stakeholders and speed reviews.
 Integrated JWT-based authentication and Chart.js visualizations with cross-functional partners.
-Increased operational efficiency by 20% via process automation and effective module design.
+Increased operational efficiency by 20 percent via process automation and effective module design.
 
-Project 3: RISHI VALLEY EdTech Platform – Rural Digital Learning with Offline Access (Jan 2022 – Oct 2022)
+Project 3: RISHI VALLEY EdTech Platform - Rural Digital Learning with Offline Access (Jan 2022 - Oct 2022)
 Environment: Angular v12, Angular Material, HTML, TypeScript, CSS, Bootstrap, Chart.js
 Built D3.js dashboards for student progress and performance insights.
 Delivered resilient offline access via IndexedDB for low-connectivity regions.
-Crafted lightweight, multilingual, role-based UIs for low-end devices to improve accessibility.
-Raised course completion by 20% for 500+ students through improved content delivery and UI workflows.
-Applied Bootstrap and Tailwind CSS to improve navigation and responsive layouts.
-Produced dynamic forms and interactive charts, yielding a 25% surge in platform usage and engagement.
+Crafted lightweight, multilingual, role-based UIs for low-end devices to increase accessibility.
+Raised course completion by 20 percent for more than 500 students through enhanced content delivery and UI workflows.
+Applied Bootstrap and Tailwind CSS to enhance navigation and responsive layouts.
+Produced dynamic forms and interactive charts, yielding a 25 percent surge in platform usage and engagement.
 Automated builds and releases with Azure DevOps Pipelines for faster, stable deployments.
-Aligned features with end‑user needs, emphasizing simplicity, performance, and accessibility.
+Aligned features with end-user needs, emphasizing simplicity, performance, and accessibility.
 Enforced role-based access control with minimal performance overhead for admins, teachers, and students.
 Key Skills
 Accuracy and attention to detail
