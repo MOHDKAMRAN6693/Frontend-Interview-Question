@@ -23,10 +23,9 @@ InnovationM Mobile and Web Technologies Pvt. Ltd
 Software Engineer, Nov 2024 - Present
 Shipped Angular features and maintenance updates across multiple modules.
 Partnered with cross-functional teams to translate requirements into scalable, responsive front-end UIs within an Agile (Scrum) environment.
-Optimized performance (–28% LCP, –18% bundle size) and strengthened client-side security controls.
 Architected a new Angular 18 application with NgRx and the Skote theme.
 Orchestrated sprint workflows in Jira for clear progress tracking and delivery.
-Streamlined CI/CD with GitHub and Azure Pipelines, reducing deployment time by ~40% and failures by 30%.
+Optimized performance (–28% LCP, –18% bundle size) and strengthened client-side security controls.
 
 Walking Tree Technologies Pvt. Ltd
 Software Engineer, Jan 2022 - Sep 2024
@@ -36,12 +35,9 @@ Resolved over 120 defects (98% on-time SLA) and improved Time to Interactive (TT
 Contributed features across shared Angular libraries and applications.
 Elevated unit test coverage from ~55% to 75%, reducing regression bugs by 25%.
 Applied modern web development practices across the stack.
-
 Education
 Master of Computer Applications (MCA), Dr. Bhimrao Ambedkar University - 2022
 Bachelor of Computer Applications (BCA), Dr. Bhimrao Ambedkar University - 2020
-Intermediate, CBSE - 2016
-High School, CBSE - 2014
 
 Projects
 Project 1: PRYPCO One Comprehensive PropTech Platform - UAE Client (Nov 2024 - Present)
@@ -61,11 +57,9 @@ Built real-time validations, multi-stage logging, and secure signature flows (Do
 Launched invoice tracking and management for transparent billing and operational oversight.
 Enabled offline-first workflows with IndexedDB to support low-connectivity data entry.
 Facilitated Scrum ceremonies for planning, updates, and risk tracking.
-Managed work in Azure Boards and automated delivery via Azure Pipelines for reliable releases.
-Cut ticket-approval turnaround by 40 percent through UX and workflow optimizations.
+Cut ticket-approval turnaround by 40 % through UX and workflow optimizations.
 Authored clear ticket documentation to align stakeholders and accelerate reviews.
 Integrated JWT-based authentication and Chart.js visualizations with cross-functional partners.
-Increased operational efficiency by 20 percent via process automation and effective module design.
 
 Project 3: RISHI VALLEY EdTech Platform - Rural Digital Learning with Offline Access (Jan 2022 - Oct 2022)
 Environment: Angular v12, Angular Material, HTML, TypeScript, CSS, Bootstrap, Chart.js
@@ -74,8 +68,6 @@ Delivered resilient offline access via IndexedDB for low-connectivity regions.
 Crafted lightweight, multilingual, role-based UIs for low-end devices to increase accessibility.
 Raised course completion rates by 20% among over 500 students through enhanced content delivery and UI workflows.
 Applied Bootstrap and Tailwind CSS to enhance navigation and responsive layouts.
-Produced dynamic forms and interactive charts, yielding a 25 percent surge in platform usage and engagement.
-Automated builds and releases with Azure DevOps Pipelines for faster, stable deployments.
 Aligned features with end-user needs, emphasizing simplicity, performance, and accessibility.
 Enforced role-based access control with minimal performance overhead for admins, teachers, and students.
 
@@ -88,4 +80,4 @@ Adaptability and ability to work under pressure
 
 Declaration
 I, Mohd Kamran, hereby declare that the information provided in this CV is true and correct to the best of my knowledge and belief.
-Date: 08 Oct 2025; Place: Greater Noida (West)
+Date: 09 Oct 2025; Place: Greater Noida (West)
