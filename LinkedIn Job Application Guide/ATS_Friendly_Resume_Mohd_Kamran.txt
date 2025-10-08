@@ -11,10 +11,12 @@ Professional Qualifications
 Master of Computer Applications (MCA), Dr. Bhim Rao Ambedkar University, Agra — 2022.
 
 Technical Skills
-Web Technologies: Angular (v12–v18), Angular Material, HTML5, CSS3, JavaScript, Bootstrap, TypeScript, NgRx/RxJS, REST APIs
-Databases: MySQL, MongoDB
-Development IDE: Visual Studio Code
-Version Control Tools: Git, Azure DevOps
+Web Technologies: Angular (v12–v18), Angular CLI, TypeScript, JavaScript (ES6+), HTML5, CSS3, SCSS
+State Management: NgRx Store, RxJS, Reactive Programming
+UI/UX: Angular Material, Bootstrap, Tailwind CSS, Responsive Web Design, Cross-Browser Compatibility
+Development Tools: Git, GitHub, Azure DevOps, Jira
+APIs & Integration: RESTful API Integration, HTTP Client Module, JSON Handling
+Methodologies: Agile, Scrum
 
 Work Experience
 InnovationM Mobile and Web Technologies Pvt. Ltd
