@@ -22,7 +22,7 @@ InnovationM Mobile and Web Technologies Pvt. Ltd
 Software Engineer, Nov 2024 - Present
 Shipped Angular features and maintenance updates across multiple modules.
 Partnered with cross-functional teams to translate requirements into scalable, responsive front-end UIs within an Agile (Scrum) environment.
-Architected a new Angular 18 application with NgRx and the Skote theme.
+Architected a new Angular 18 application with NgRx.
 Orchestrated sprint workflows in Jira for clear progress tracking and delivery.
 Optimized performance (–28% LCP, –18% bundle size) and strengthened client-side security controls.
 
@@ -30,7 +30,7 @@ Walking Tree Technologies Pvt. Ltd
 Software Engineer, Jan 2022 - Sep 2024
 Built interactive Angular modules for enterprise workflows.
 Co-designed RESTful interfaces with backend teams.
-Resolved over 120 defects (98% on-time SLA) & improved Time to Interactive (TTI) by 400 ms.
+Resolved over 120 defects (98% on-time SLA) and improved Time to Interactive (TTI) by 400 ms.
 Contributed features across shared Angular libraries and applications.
 Elevated unit test coverage from ~55% to 75%, reducing regression bugs by 25%.
 Applied modern web development practices across the stack.
@@ -38,7 +38,6 @@ Applied modern web development practices across the stack.
 Education
 Master of Computer Applications (MCA), Dr. Bhimrao Ambedkar University - 2022
 Bachelor of Computer Applications (BCA), Dr. Bhimrao Ambedkar University - 2020
-
 Projects
 Project 1: PRYPCO One Comprehensive PropTech Platform - UAE Client (Nov 2024 - Present)
 Environment: Angular v18, HTML, TypeScript, SCSS, Bootstrap, Airtable
@@ -48,28 +47,21 @@ Instrumented analytics and controlled rollouts with Amplitude, Split.io, and Goo
 Established real-time support via Intercom.
 Upheld component architecture, responsive design, and unit testing to ensure quality and performance.
 Coordinated closely with backend teams for seamless RESTful API integration supporting property data, user profiles, and referral workflows.
-Empowered UAE real estate agents to generate leads, craft offers, and manage portfolios through targeted feature delivery.
 
-Project 2: FRACPRO OPS Oilfield Operations Management Platform - US Client (Nov 2022 - Sep 2024)
+Project 2: FRACPRO OPS Oilfield Operations Management Platform with Offline Access - US Client (Nov 2022 - Sep 2024)
 Environment: Angular v12, Angular Material, HTML, TypeScript, CSS, Bootstrap, MongoDB
 Engineered Field Ticketing and Signature modules in Angular 12 and Spring Boot to digitize oilfield operations.
 Built real-time validations, multi-stage logging, and secure signature flows (DocuSign-style) to ensure accuracy and traceability.
-Launched invoice tracking and management for transparent billing and operational oversight.
 Enabled offline-first workflows with IndexedDB to support low-connectivity data entry.
-Facilitated Scrum ceremonies for planning, updates, and risk tracking.
 Cut ticket-approval turnaround by 40 % through UX and workflow optimizations.
 Authored clear ticket documentation to align stakeholders and accelerate reviews.
-Integrated JWT-based authentication and Chart.js visualizations with cross-functional partners.
 
-Project 3: RISHI VALLEY EdTech Platform - Rural Digital Learning with Offline Access (Jan 2022 - Oct 2022)
+Project 3: RISHI VALLEY EdTech Platform - Rural Digital Learning (Jan 2022 - Oct 2022)
 Environment: Angular v12, Angular Material, HTML, TypeScript, CSS, Bootstrap, Chart.js
 Built D3.js dashboards for student progress and performance insights.
-Delivered resilient offline access via IndexedDB for low-connectivity regions.
 Crafted lightweight, multilingual, role-based UIs for low-end devices to increase accessibility.
 Raised course completion rates by 20% among over 500 students through enhanced content delivery and UI workflows.
-Applied Bootstrap and Tailwind CSS to enhance navigation and responsive layouts.
 Aligned features with end-user needs, emphasizing simplicity, performance, and accessibility.
-Enforced role-based access control with minimal performance overhead for admins, teachers, and students.
 
 Key Skills
 Accuracy and attention to detail
