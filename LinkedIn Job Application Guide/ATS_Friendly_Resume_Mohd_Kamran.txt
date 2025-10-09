@@ -53,12 +53,12 @@ Environment: Angular v12, Angular Material, HTML, TypeScript, CSS, Bootstrap, Mo
 Engineered Field Ticketing and Signature modules in Angular 12 and Spring Boot to digitize oilfield operations.
 Built real-time validations, multi-stage logging, and secure signature flows (DocuSign-style) to ensure accuracy and traceability.
 Enabled offline-first workflows with IndexedDB to support low-connectivity data entry.
-Cut ticket-approval turnaround by 40 % through UX and workflow optimizations.
+Cut ticket-approval turnaround by 40% through UX and workflow optimizations.
 Authored clear ticket documentation to align stakeholders and accelerate reviews.
 
 Project 3: RISHI VALLEY EdTech Platform - Rural Digital Learning (Jan 2022 - Oct 2022)
 Environment: Angular v12, Angular Material, HTML, TypeScript, CSS, Bootstrap, Chart.js
-Built D3.js dashboards for student progress and performance insights.
+Built Chart.js dashboards for student progress and performance insights.
 Crafted lightweight, multilingual, role-based UIs for low-end devices to increase accessibility.
 Raised course completion rates by 20% among over 500 students through enhanced content delivery and UI workflows.
 Aligned features with end-user needs, emphasizing simplicity, performance, and accessibility.
