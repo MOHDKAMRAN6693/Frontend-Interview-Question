@@ -11,12 +11,11 @@ Professional Qualifications
 Master of Computer Applications (MCA), Dr. Bhimrao Ambedkar University, Agra – 2022
 
 Technical Skills
-Web Technologies: Angular (v12-v18), Angular CLI, TypeScript, JavaScript (ES6+), HTML5, CSS3, SCSS
+Web Technologies: Angular (v12-v18), TypeScript, JavaScript (ES6+), HTML5, CSS3, SCSS
 State Management: NgRx Store, RxJS, Reactive Programming
-UI/UX: Angular Material, Bootstrap, Tailwind CSS, Responsive Web Design, Cross-Browser Compatibility
+UI/UX: Angular Material, Bootstrap, Responsive Web Design, Cross-Browser Compatibility
 Development Tools: Git, GitHub, Azure DevOps
 API Integration: RESTful API Integration, HTTP Client Module, JSON Handling
-Methodologies: Agile, Scrum
 
 Work Experience
 InnovationM Mobile and Web Technologies Pvt. Ltd
@@ -31,10 +30,11 @@ Walking Tree Technologies Pvt. Ltd
 Software Engineer, Jan 2022 - Sep 2024
 Built interactive Angular modules for enterprise workflows.
 Co-designed RESTful interfaces with backend teams.
-Resolved over 120 defects (98% on-time SLA) and improved Time to Interactive (TTI) by 400 ms.
+Resolved over 120 defects (98% on-time SLA) & improved Time to Interactive (TTI) by 400 ms.
 Contributed features across shared Angular libraries and applications.
 Elevated unit test coverage from ~55% to 75%, reducing regression bugs by 25%.
 Applied modern web development practices across the stack.
+
 Education
 Master of Computer Applications (MCA), Dr. Bhimrao Ambedkar University - 2022
 Bachelor of Computer Applications (BCA), Dr. Bhimrao Ambedkar University - 2020
