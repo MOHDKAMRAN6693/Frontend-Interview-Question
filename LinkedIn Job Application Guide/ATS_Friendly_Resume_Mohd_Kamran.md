@@ -9,7 +9,7 @@
 
 ## SUMMARY
 
-Frontend Software Engineer with over 3 years of experience building user-centric, high-performance web applications using modern frameworks in Agile environments; strong in problem-solving and collaboration.
+Frontend Software Engineer with 3.8+ years of experience building user-centric, high-performance web applications using modern frameworks in Agile environments; strong in problem-solving and collaboration.
 
 ---
 
@@ -45,7 +45,7 @@ Master of Computer Applications (MCA), Dr. Bhimrao Ambedkar University, Agra –
 
 - Built interactive Angular modules for enterprise workflows.
 - Co-designed RESTful interfaces with backend teams.
-- Resolved over 120 defects (98% on-time SLA) and improved Time to Interactive (TTI) by 400 ms.
+- Resolved over 120 defects (98% on-time SLA) and improved Time to Interactive (TTI) by 00 ms.
 - Contributed features across shared Angular libraries and applications.
 - Elevated unit test coverage from ~55% to 75%, reducing regression bugs by 25%.
 - Applied modern web development practices across the stack.
@@ -54,8 +54,7 @@ Master of Computer Applications (MCA), Dr. Bhimrao Ambedkar University, Agra –
 
 ## EDUCATION
 
-Master of Computer Applications (MCA), Dr. Bhimrao Ambedkar University - 2022  
-Bachelor of Computer Applications (BCA), Dr. Bhimrao Ambedkar University - 2020
+Master of Computer Applications (MCA), Dr. Bhimrao Ambedkar University, Agra — 2022
 
 ---
 
@@ -64,43 +63,40 @@ Bachelor of Computer Applications (BCA), Dr. Bhimrao Ambedkar University - 2020
 ### Project 1: PRYPCO One Comprehensive PropTech Platform - UAE Client (Nov 2024 - Present)
 **Environment:** Angular v18, HTML, TypeScript, SCSS, Bootstrap, Airtable
 
-- Implemented core modules — Project Listing, Property Management, Dashboard, Refer & Earn, and My Profile — in Angular 18 with NgRx Store.
-- Added Mapbox-powered geospatial search and interactive maps.
+- Implemented core modules - Project Listing, Property Management, Dashboard, Agent Profile, Refer and Earn in Angular 18 with NgRx Store.
+- Added Map box for geospatial search and interactive maps.
 - Instrumented analytics and controlled rollouts with Amplitude, Split.io, and Google Analytics.
 - Established real-time support via Intercom.
 - Upheld component architecture, responsive design, and unit testing to ensure quality and performance.
-- Coordinated closely with backend teams for seamless RESTful API integration supporting property data, user profiles, and referral workflows.
+- Coordinated closely with backend teams for seamless RESTful API integration supporting property data and referral workflows.
 
 ### Project 2: FRACPRO OPS Oilfield Operations Management Platform with Offline Access - US Client (Nov 2022 - Sep 2024)
 **Environment:** Angular v12, Angular Material, HTML, TypeScript, CSS, Bootstrap, MongoDB
 
-- Engineered Field Ticketing and Signature modules in Angular 12 and Spring Boot to digitize oilfield operations.
-- Built real-time validations, multi-stage logging, and secure signature flows (DocuSign-style) to ensure accuracy and traceability.
+- Engineered Field Ticketing and Signature modules to digitize oilfield operations.
+- Built real-time validations and secure DocuSign-style signature flows to ensure accuracy and traceability.
 - Enabled offline-first workflows with IndexedDB to support low-connectivity data entry.
-- Cut ticket-approval turnaround by 40% through UX and workflow optimizations.
-- Authored clear ticket documentation to align stakeholders and accelerate reviews.
+- Reduced ticket-approval turnaround by 40% through UX and workflow optimizations.
+- Authored documentation to align stakeholders and accelerate reviews.
 
-### Project 3: RISHI VALLEY EdTech Platform - Rural Digital Learning (Jan 2022 - Oct 2022)
+### Project 3: RISHI VALLEY Learning Platform (Jan 2022 - Oct 2022)
 **Environment:** Angular v12, Angular Material, HTML, TypeScript, CSS, Bootstrap, Chart.js
 
-- Built Chart.js dashboards for student progress and performance insights.
-- Crafted lightweight, multilingual, role-based UIs for low-end devices to increase accessibility.
-- Raised course completion rates by 20% among over 500 students through enhanced content delivery and UI workflows.
-- Aligned features with end-user needs, emphasizing simplicity, performance, and accessibility.
+- Built Chart.js dashboards for student performance insights.
+- Crafted multilingual, role-based UIs for low-end devices, increasing accessibility.
+- Automated PDF certificate generation upon course completion.
+- Emphasised simplicity, performance, and accessibility in feature design.
 
 ---
 
 ## KEY SKILLS
 
-- Accuracy and attention to detail
-- Self-motivated with high energy
-- Decision-making and critical thinking
-- Organization and planning
-- Adaptability and ability to work under pressure
+- Attention to detail | Critical thinking | Decision-making | Adaptability | Organization and planning | Self-motivation
 
 ---
 
 ## DECLARATION
 
 I, Mohd Kamran, hereby declare that the information provided in this CV is true and correct to the best of my knowledge and belief.  
-**Date:** 09 Oct 2025; **Place:** Greater Noida (West)
+Mohd Kamran  
+Greater Noida, 12 Oct 2025
