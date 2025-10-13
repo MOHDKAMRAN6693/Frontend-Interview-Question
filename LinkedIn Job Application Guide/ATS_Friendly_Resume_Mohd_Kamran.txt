@@ -2,7 +2,7 @@ MOHD KAMRAN
 mohd.kamran6693@gmail.com | +91-7906451993 | Greater Noida (West), India | linkedin.com/in/mohd-kamran-23bb22201
 
 Summary
-Frontend Software Engineer with 3.8+ years of experience building user-centric, high-performance web applications using modern frameworks in Agile environments; strong in problem-solving and collaboration.
+Frontend Software Engineer with 3.8+ years of experience building user-centric, high-performance web applications using modern frameworks in Agile environments; experienced in root-cause analysis and cross-functional collaboration.
 
 Technical Skills
 Web Technologies — Angular (v12-v18) | TypeScript | JavaScript (ES6+) | HTML5 | CSS3 | SCSS
@@ -31,7 +31,7 @@ Constructed and maintained reusable UI components and shared services, cutting r
 Accelerated load and runtime performance using AOT compilation, bundle compression, and route-level lazy loading, achieving 30–40% faster load speeds.
 Ensured WCAG-compliant accessibility and cross-browser responsiveness, elevating overall user experience metrics.
 Authored and executed unit/integration tests with Jasmine and Karma, achieving 90% test coverage and reducing regression defects.
-Collaborated with design teams to transform Figma mockups into dynamic Angular layouts, maintaining 100% design fidelity.
+Collaborated with design teams to transform Figma mockups into interactive Angular layouts, maintaining 100% design fidelity.
 Led technical sessions, coached mid-level developers, and improved team-wide code quality and onboarding practices.
 Participated in Agile ceremonies, maintaining steady sprint velocity and ensuring on-schedule project releases.
 
@@ -62,7 +62,7 @@ Professional Qualifications
 Master of Computer Applications (MCA) | Dr. Bhimrao Ambedkar University |  Agra – 2022
 
 Key Skills
-Attention to detail, Critical thinking, Decision-making, Adaptability, Self-motivation, Organization and planning.
+Defect detection in code reviews, Requirements and impact analysis, Decision-making, Context switching across modules, Self-motivation, Organization and planning.
 
 Declaration
 I, Mohd Kamran, hereby declare that the information provided in this CV is true and correct to the best of my knowledge and belief.
