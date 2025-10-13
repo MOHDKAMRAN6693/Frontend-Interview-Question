@@ -39,25 +39,25 @@ Collaborated with design teams to transform Figma mockups into interactive Angul
 PROJECTS
 PRYPCO One | Comprehensive PropTech Platform (UAE Client) | Nov 2024 – Present
  Environment: Angular v18, HTML, TypeScript, SCSS, Bootstrap, Airtable
-Engineered a modular Angular platform for property listing, booking, and management, improving maintainability and accelerating feature delivery by ~30%.
+Built a modular Angular platform for property listing, booking, and management, improving maintainability and accelerating feature delivery by ~30%.
 Integrated Mapbox for geospatial search and interactive property maps, enhancing property discovery and user engagement by ~35%.
 Implemented real-time messaging and support via Intercom, improving tenant-owner communication efficiency by ~40%.
 Instrumented analytics and controlled rollouts using Amplitude, Split.io, and Google Analytics, enabling data-driven decisions and A/B testing of features.
-Developed responsive property listing, detail, and booking components, supporting filters, multimedia content, and scheduling, reducing manual coordination by ~40%.
+Delivered responsive property listing, detail, and booking components, supporting filters, multimedia content, and scheduling, reducing manual coordination by ~40%.
 
 
 FRACPRO OPS | Oilfield Operations Management Platform (US Client) | Nov 2022 – Sep 2024
  Environment: Angular v12, Angular Material, HTML, TypeScript, CSS, Bootstrap, MongoDB
-Engineered a scalable, modular Angular application to manage jobs, wells, and multi-stage operations, improving maintainability and reducing development time by ~30%.
-Developed dynamic Field Ticket and Invoice modules, enabling engineers to log chemicals, equipment, and fuel usage across 200+ stages per well, reducing manual billing errors by ~40%.
+Created a scalable, modular Angular application to manage jobs, wells, and multi-stage operations, improving maintainability and reducing development time by ~30%.
+Designed dynamic Field Ticket and Invoice modules, enabling engineers to log chemicals, equipment, and fuel usage across 200+ stages per well, reducing manual billing errors by ~40%.
 Optimized real-time job and stage progress tracking using RxJS observables, achieving <200ms UI response time for stage updates.
 Designed interactive dashboards and analytics components, visualizing resource usage, job progress, and field ticket metrics, improving operational decision-making by ~25%.
 
 
 RISHI VALLEY Learning Platform | Jan 2022 – Oct 2022
  Environment: Angular v12, Angular Material, HTML, TypeScript, CSS, Bootstrap, Chart.js
-Engineered dynamic PDF certificate generation for completed courses, enabling instant certificate download and increasing student satisfaction by ~40%.
-Developed interactive assessments and quizzes module, allowing students to attempt multiple-choice questions and coding challenges, improving engagement by ~35%.
+Implemented dynamic PDF certificate generation for completed courses, enabling instant certificate download and increasing student satisfaction by ~40%.
+Crafted interactive assessments and quizzes module, allowing students to attempt multiple-choice questions and coding challenges, improving engagement by ~35%.
 Implemented real-time quiz evaluation engine with automatic scoring and instant feedback, reducing manual grading time by ~70%.
 Integrated student performance dashboards with visual charts and progress indicators, providing actionable insights to students and instructors and increasing course completion rates by ~25%.	
 
