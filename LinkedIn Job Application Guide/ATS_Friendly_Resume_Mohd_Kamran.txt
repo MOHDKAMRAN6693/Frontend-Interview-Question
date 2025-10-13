@@ -27,7 +27,7 @@ Coordinated sprint planning, backlog refinement, and stakeholder communication t
 
 Software Engineer
  Walking Tree Technologies Pvt. Ltd | Jan 2022 – Sep 2024
-Delivered end-to-end development of enterprise-grade Angular applications, enhancing modularity and reducing maintenance overhead by ~30%.
+Produced end-to-end development of enterprise-grade Angular applications, enhancing modularity and reducing maintenance overhead by ~30%.
 Integrated complex REST APIs and introduced secure JWT-based authentication with interceptors, improving data integrity and API reliability by 40%.
 Constructed and maintained reusable UI components and shared services, cutting redundant code across modules by ~25%.
 Accelerated load and runtime performance using AOT compilation, bundle compression, and route-level lazy loading, achieving 30–40% faster load speeds.
@@ -43,7 +43,7 @@ Built a modular Angular platform for property listing, booking, and management, 
 Connected Mapbox for geospatial search and interactive property maps, enhancing property discovery and user engagement by ~35%.
 Implemented real-time messaging and support via Intercom, improving tenant-owner communication efficiency by ~40%.
 Instrumented analytics and controlled rollouts using Amplitude, Split.io, and Google Analytics, enabling data-driven decisions and A/B testing of features.
-Delivered responsive property listing, detail, and booking components, supporting filters, multimedia content, and scheduling, reducing manual coordination by ~40%.
+Generated responsive property listing, detail, and booking components, supporting filters, multimedia content, and scheduling, reducing manual coordination by ~40%.
 
 
 FRACPRO OPS | Oilfield Operations Management Platform (US Client) | Nov 2022 – Sep 2024
