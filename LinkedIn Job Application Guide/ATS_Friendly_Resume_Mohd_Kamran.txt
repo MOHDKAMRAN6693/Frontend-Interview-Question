@@ -1,5 +1,6 @@
 MOHD KAMRAN
-Greater Noida, U.P, India – 201009 | +91-7906451993 | mohd.kamran6693@gmail.com | LinkedIn
+mohd.kamran6693@gmail.com | +91-7906451993 | Greater Noida, U.P, India – 201009 | LinkedIn
+
 SUMMARY
 Frontend Software Engineer with 3.8+ years of experience building user-centric, high-performance web applications using modern frameworks in Agile environments. Experienced in root-cause analysis, scalable frontend architecture, and cross-functional collaboration.
 
@@ -11,7 +12,7 @@ Development Tools: Git, GitHub, Azure
 
 WORK EXPERIENCE
 InnovationM Mobile and Web Technologies Pvt. Ltd	Nov 2024 – Present
-Software Engineer	Noida, U.P
+Software Engineer	Noida, India
 Designed and deployed scalable, modular Angular applications, improving performance and maintainability by ~30% through efficient architecture and clean code practices.
 Established and enforced frontend architecture standards and folder structures, ensuring 100% consistency in coding conventions.
 Integrated RESTful APIs and configured JWT authentication with route guards, reducing unauthorized access incidents by 40%.
@@ -19,7 +20,7 @@ Developed reusable Angular components, directives, and pipes, decreasing repetit
 Coordinated sprint planning, backlog refinement, and stakeholder communication, ensuring 100% on-time delivery of critical releases.
 
 Walking Tree Technologies Pvt. Ltd	Jan 2022 – Sep 2024
-Software Engineer	Agra, U.P
+Software Engineer	Agra, India
 Delivered end-to-end development of enterprise-grade Angular applications, enhancing modularity and reducing maintenance overhead by ~30%.
 Integrated complex REST APIs and introduced JWT-based authentication with interceptors, improving data integrity and API reliability by 40%.
 Constructed and maintained reusable UI components and shared services, cutting redundant code across modules by ~25%.
