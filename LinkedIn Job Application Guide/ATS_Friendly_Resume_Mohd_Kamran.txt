@@ -1,6 +1,5 @@
 MOHD KAMRAN
-Greater Noida (West), India | +91-7906451993 | mohd.kamran6693@gmail.com | LinkedIn
-
+Greater Noida, U.P, India – 201009 | +91-7906451993 | mohd.kamran6693@gmail.com | LinkedIn
 SUMMARY
 Frontend Software Engineer with 3.8+ years of experience building user-centric, high-performance web applications using modern frameworks in Agile environments. Experienced in root-cause analysis, scalable frontend architecture, and cross-functional collaboration.
 
@@ -9,11 +8,9 @@ Web Technologies: Angular (v12–v18), TypeScript, JavaScript (ES6+), HTML5, CSS
 State Management: NgRx Store, RxJS, Reactive Programming
 UI/UX: Angular Material, Bootstrap, Responsive Web Design, Cross-Browser Compatibility
 Development Tools: Git, GitHub, Azure
-API Integration: RESTful API Integration, HTTP Client Module, JSON HandlingWORK EXPERIENCE
-
 WORK EXPERIENCE
 InnovationM Mobile and Web Technologies Pvt. Ltd	Nov 2024 – Present
-Software Engineer
+Software Engineer	Noida, U.P
 Designed and deployed scalable, modular Angular applications, improving performance and maintainability by ~30% through efficient architecture and clean code practices.
 Established and enforced frontend architecture standards and folder structures, ensuring 100% consistency in coding conventions.
 Integrated RESTful APIs and configured JWT authentication with route guards, reducing unauthorized access incidents by 40%.
@@ -21,13 +18,14 @@ Developed reusable Angular components, directives, and pipes, decreasing repetit
 Coordinated sprint planning, backlog refinement, and stakeholder communication, ensuring 100% on-time delivery of critical releases.
 
 Walking Tree Technologies Pvt. Ltd	Jan 2022 – Sep 2024
-Software Engineer
+Software Engineer	Agra, U.P
 Delivered end-to-end development of enterprise-grade Angular applications, enhancing modularity and reducing maintenance overhead by ~30%.
 Integrated complex REST APIs and introduced JWT-based authentication with interceptors, improving data integrity and API reliability by 40%.
 Constructed and maintained reusable UI components and shared services, cutting redundant code across modules by ~25%.
 Accelerated load and runtime performance using AOT compilation, bundle compression, and route-level lazy loading, achieving 30–40% faster load speeds.
 Authored and executed unit/integration tests with Jasmine and Karma, achieving 90% test coverage and reducing regression defects.
 Collaborated with design teams to transform Figma mockups into interactive Angular layouts, maintaining 100% design fidelity.
+
 
 PROJECTS
 PRYPCO One – Comprehensive PropTech Platform (UAE Client)	Nov 2024 – Present
@@ -40,7 +38,7 @@ Instrumented analytics and controlled rollouts using Amplitude, Split.io, and Go
 FRACPRO OPS – Oilfield Operations Management Platform (US Client)	Nov 2022 – Sep 2024
 Environment: Angular v12, Angular Material, HTML, TypeScript, CSS, Bootstrap
 Created a scalable, modular Angular application to manage jobs, wells, and multi-stage operations, improving maintainability and reducing development time by ~30%.
-Constructed dynamic Field Ticket and Invoice modules, enabling engineers to log chemicals, equipment, and fuel usage across 200+ stages per well, reducing manual billing errors by ~40%.
+Constructed interactive Field Ticket and Invoice modules, enabling engineers to log chemicals, equipment, and fuel usage across 200+ stages per well, reducing manual billing errors by ~40%.
 Optimized real-time job and stage progress tracking using RxJS observables, achieving <200ms UI response time.
 Built interactive dashboards and analytics components, visualizing resource usage, job progress, and field ticket metrics, improving operational decision-making by ~25%.
 
@@ -52,7 +50,7 @@ Launched real-time quiz evaluation engine with automatic scoring and instant fee
 Linked student performance dashboards with visual charts and progress indicators, providing actionable insights and increasing course completion rates by ~25%.
 
 PROFESSIONAL QUALIFICATION
-Master of Computer Applications (MCA), Dr Bhimrao Ambedkar University.	2022
+Master of Computer Applications (MCA), Dr Bhimrao Ambedkar University.	 2022 | Agra, U.P
 
 KEY SKILLS
 Defect detection in code reviews, Requirements and impact analysis, Decision-making, Context switching across modules, Self-motivation, Organization and planning.
