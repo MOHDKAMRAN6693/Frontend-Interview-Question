@@ -8,6 +8,7 @@ Web Technologies: Angular (v12–v18), TypeScript, JavaScript (ES6+), HTML5, CSS
 State Management: NgRx Store, RxJS, Reactive Programming
 UI/UX: Angular Material, Bootstrap, Responsive Web Design, Cross-Browser Compatibility
 Development Tools: Git, GitHub, Azure
+
 WORK EXPERIENCE
 InnovationM Mobile and Web Technologies Pvt. Ltd	Nov 2024 – Present
 Software Engineer	Noida, U.P
