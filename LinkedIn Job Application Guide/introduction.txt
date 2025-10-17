@@ -1,0 +1,11 @@
+Tell Me About Yourself – Spoken Version:
+
+Hi, I’m Mohd Kamran, a Frontend Software Engineer with around 3.8 years of experience in building scalable and user-focused web applications, primarily using Angular.
+
+I started my career at Walking Tree Technologies, where I worked on enterprise-grade Angular projects for clients in domains like oilfield operations and education, focusing on performance optimization, reusable UI components, and clean architecture.
+
+Currently, I’m working at InnovationM as a Software Engineer, where I’m involved in designing and implementing modular frontend architectures, integrating RESTful APIs, and improving application performance and maintainability.
+
+I’ve worked with technologies like Angular (v12 to v18), TypeScript, RxJS, NgRx, and Angular Material, and I enjoy creating intuitive, responsive interfaces that deliver great user experiences.
+
+I’m passionate about writing maintainable, efficient code and collaborating with cross-functional teams to deliver high-quality products. Right now, I’m looking to take on new challenges where I can contribute to impactful projects and continue growing as a frontend engineer.
