@@ -11,7 +11,7 @@ WORK EXPERIENCE
 InnovationM Mobile and Web Technologies Pvt. Ltd	Nov 2024 – Present
 Software Engineer	Noida, India
 Designed and deployed scalable, modular Angular applications, improving performance and maintainability by ~30% through efficient architecture and clean code practices.
-Established and enforced frontend architecture standards and folder structures, ensuring 100% consistency in coding conventions.
+Enforced frontend architecture standards and folder structures, ensuring 100% consistency in coding conventions.
 Integrated RESTful APIs and configured JWT authentication with route guards, reducing unauthorized access incidents by 40%.
 Developed reusable Angular components, directives, and pipes, decreasing repetitive code by 25–30% and accelerating feature delivery.
 Coordinated sprint planning, backlog refinement, and stakeholder communication, ensuring 100% on-time delivery of critical releases.
@@ -53,4 +53,4 @@ KEY SKILLS
 Defect detection in code reviews, Requirements and impact analysis, Decision-making, Context switching across modules, Self-motivation, Organization and planning.
 DECLARATION
 I, Mohd Kamran, hereby declare that the information provided in this CV is true and correct to the best of my knowledge and belief. 
-Greater Noida, 16 Oct 2025
+Greater Noida, 21 Oct 2025
